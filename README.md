@@ -1,5 +1,6 @@
 # NAXIUM Safeguard OSS
-
+> *Note: Some people may be uncomfortable with the content inside of the filters. If you are one of these people, just don't open the embeddings/semantic/json files.*
+> 
 **Local-first, multi-layer heuristic safeguard** for LLM **inputs**, **outputs**, and **tool calls**.
 
 | | |
