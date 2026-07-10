@@ -1,0 +1,2404 @@
+{
+  "grams": [
+    {
+      "gram": "ack",
+      "weight": 0.2
+    },
+    {
+      "gram": "ware",
+      "weight": 0.2
+    },
+    {
+      "gram": "she",
+      "weight": 0.2
+    },
+    {
+      "gram": "hel",
+      "weight": 0.2
+    },
+    {
+      "gram": "ell",
+      "weight": 0.2
+    },
+    {
+      "gram": "shel",
+      "weight": 0.2
+    },
+    {
+      "gram": "hell",
+      "weight": 0.2
+    },
+    {
+      "gram": "pas",
+      "weight": 0.2
+    },
+    {
+      "gram": "ass",
+      "weight": 0.2
+    },
+    {
+      "gram": "bypa",
+      "weight": 0.2
+    },
+    {
+      "gram": "ypas",
+      "weight": 0.2
+    },
+    {
+      "gram": "pass",
+      "weight": 0.2
+    },
+    {
+      "gram": "ver",
+      "weight": 0.2
+    },
+    {
+      "gram": "ste",
+      "weight": 0.2
+    },
+    {
+      "gram": "stea",
+      "weight": 0.2
+    },
+    {
+      "gram": "teal",
+      "weight": 0.2
+    },
+    {
+      "gram": "ing",
+      "weight": 0.2
+    },
+    {
+      "gram": "ploi",
+      "weight": 0.16
+    },
+    {
+      "gram": "loit",
+      "weight": 0.16
+    },
+    {
+      "gram": "exfi",
+      "weight": 0.16
+    },
+    {
+      "gram": "xfil",
+      "weight": 0.16
+    },
+    {
+      "gram": "dump",
+      "weight": 0.16
+    },
+    {
+      "gram": "bomb",
+      "weight": 0.16
+    },
+    {
+      "gram": "hash",
+      "weight": 0.16
+    },
+    {
+      "gram": "meta",
+      "weight": 0.16
+    },
+    {
+      "gram": "cket",
+      "weight": 0.16
+    },
+    {
+      "gram": "evil",
+      "weight": 0.16
+    },
+    {
+      "gram": "cont",
+      "weight": 0.16
+    },
+    {
+      "gram": "tion",
+      "weight": 0.16
+    },
+    {
+      "gram": "war",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "are",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "byp",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "ypa",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "tea",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "eal",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "for",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "ers",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "red",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "con",
+      "weight": 0.15000000000000002
+    },
+    {
+      "gram": "plo",
+      "weight": 0.1
+    },
+    {
+      "gram": "loi",
+      "weight": 0.1
+    },
+    {
+      "gram": "oit",
+      "weight": 0.1
+    },
+    {
+      "gram": "ylo",
+      "weight": 0.1
+    },
+    {
+      "gram": "exf",
+      "weight": 0.1
+    },
+    {
+      "gram": "xfi",
+      "weight": 0.1
+    },
+    {
+      "gram": "fil",
+      "weight": 0.1
+    },
+    {
+      "gram": "dum",
+      "weight": 0.1
+    },
+    {
+      "gram": "ump",
+      "weight": 0.1
+    },
+    {
+      "gram": "cra",
+      "weight": 0.1
+    },
+    {
+      "gram": "rce",
+      "weight": 0.1
+    },
+    {
+      "gram": "pon",
+      "weight": 0.1
+    },
+    {
+      "gram": "bom",
+      "weight": 0.1
+    },
+    {
+      "gram": "omb",
+      "weight": 0.1
+    },
+    {
+      "gram": "swa",
+      "weight": 0.1
+    },
+    {
+      "gram": "per",
+      "weight": 0.1
+    },
+    {
+      "gram": "ter",
+      "weight": 0.1
+    },
+    {
+      "gram": "has",
+      "weight": 0.1
+    },
+    {
+      "gram": "ash",
+      "weight": 0.1
+    },
+    {
+      "gram": "cat",
+      "weight": 0.1
+    },
+    {
+      "gram": "sql",
+      "weight": 0.1
+    },
+    {
+      "gram": "met",
+      "weight": 0.1
+    },
+    {
+      "gram": "eta",
+      "weight": 0.1
+    },
+    {
+      "gram": "rev",
+      "weight": 0.1
+    },
+    {
+      "gram": "bin",
+      "weight": 0.1
+    },
+    {
+      "gram": "enc",
+      "weight": 0.1
+    },
+    {
+      "gram": "ive",
+      "weight": 0.1
+    },
+    {
+      "gram": "ker",
+      "weight": 0.1
+    },
+    {
+      "gram": "den",
+      "weight": 0.1
+    },
+    {
+      "gram": "cke",
+      "weight": 0.1
+    },
+    {
+      "gram": "ket",
+      "weight": 0.1
+    },
+    {
+      "gram": "esc",
+      "weight": 0.1
+    },
+    {
+      "gram": "bit",
+      "weight": 0.1
+    },
+    {
+      "gram": "res",
+      "weight": 0.1
+    },
+    {
+      "gram": "evi",
+      "weight": 0.1
+    },
+    {
+      "gram": "vil",
+      "weight": 0.1
+    },
+    {
+      "gram": "itm",
+      "weight": 0.1
+    },
+    {
+      "gram": "ain",
+      "weight": 0.1
+    },
+    {
+      "gram": "ont",
+      "weight": 0.1
+    },
+    {
+      "gram": "ine",
+      "weight": 0.1
+    },
+    {
+      "gram": "tio",
+      "weight": 0.1
+    },
+    {
+      "gram": "ion",
+      "weight": 0.1
+    },
+    {
+      "gram": "nti",
+      "weight": 0.1
+    },
+    {
+      "gram": "hack",
+      "weight": 0.08
+    },
+    {
+      "gram": "expl",
+      "weight": 0.08
+    },
+    {
+      "gram": "xplo",
+      "weight": 0.08
+    },
+    {
+      "gram": "malw",
+      "weight": 0.08
+    },
+    {
+      "gram": "alwa",
+      "weight": 0.08
+    },
+    {
+      "gram": "lwar",
+      "weight": 0.08
+    },
+    {
+      "gram": "rans",
+      "weight": 0.08
+    },
+    {
+      "gram": "anso",
+      "weight": 0.08
+    },
+    {
+      "gram": "nsom",
+      "weight": 0.08
+    },
+    {
+      "gram": "phis",
+      "weight": 0.08
+    },
+    {
+      "gram": "hish",
+      "weight": 0.08
+    },
+    {
+      "gram": "payl",
+      "weight": 0.08
+    },
+    {
+      "gram": "aylo",
+      "weight": 0.08
+    },
+    {
+      "gram": "yloa",
+      "weight": 0.08
+    },
+    {
+      "gram": "load",
+      "weight": 0.08
+    },
+    {
+      "gram": "root",
+      "weight": 0.08
+    },
+    {
+      "gram": "ootk",
+      "weight": 0.08
+    },
+    {
+      "gram": "otki",
+      "weight": 0.08
+    },
+    {
+      "gram": "tkit",
+      "weight": 0.08
+    },
+    {
+      "gram": "keyl",
+      "weight": 0.08
+    },
+    {
+      "gram": "eylo",
+      "weight": 0.08
+    },
+    {
+      "gram": "ylog",
+      "weight": 0.08
+    },
+    {
+      "gram": "botn",
+      "weight": 0.08
+    },
+    {
+      "gram": "otne",
+      "weight": 0.08
+    },
+    {
+      "gram": "tnet",
+      "weight": 0.08
+    },
+    {
+      "gram": "back",
+      "weight": 0.08
+    },
+    {
+      "gram": "ackd",
+      "weight": 0.08
+    },
+    {
+      "gram": "ckdo",
+      "weight": 0.08
+    },
+    {
+      "gram": "kdoo",
+      "weight": 0.08
+    },
+    {
+      "gram": "door",
+      "weight": 0.08
+    },
+    {
+      "gram": "jail",
+      "weight": 0.08
+    },
+    {
+      "gram": "ailb",
+      "weight": 0.08
+    },
+    {
+      "gram": "ilbr",
+      "weight": 0.08
+    },
+    {
+      "gram": "lbre",
+      "weight": 0.08
+    },
+    {
+      "gram": "brea",
+      "weight": 0.08
+    },
+    {
+      "gram": "reak",
+      "weight": 0.08
+    },
+    {
+      "gram": "inje",
+      "weight": 0.08
+    },
+    {
+      "gram": "njec",
+      "weight": 0.08
+    },
+    {
+      "gram": "ject",
+      "weight": 0.08
+    },
+    {
+      "gram": "over",
+      "weight": 0.08
+    },
+    {
+      "gram": "verf",
+      "weight": 0.08
+    },
+    {
+      "gram": "erfl",
+      "weight": 0.08
+    },
+    {
+      "gram": "rflo",
+      "weight": 0.08
+    },
+    {
+      "gram": "flow",
+      "weight": 0.08
+    },
+    {
+      "gram": "crac",
+      "weight": 0.08
+    },
+    {
+      "gram": "rack",
+      "weight": 0.08
+    },
+    {
+      "gram": "brut",
+      "weight": 0.08
+    },
+    {
+      "gram": "rute",
+      "weight": 0.08
+    },
+    {
+      "gram": "utef",
+      "weight": 0.08
+    },
+    {
+      "gram": "tefo",
+      "weight": 0.08
+    },
+    {
+      "gram": "efor",
+      "weight": 0.08
+    },
+    {
+      "gram": "forc",
+      "weight": 0.08
+    },
+    {
+      "gram": "orce",
+      "weight": 0.08
+    },
+    {
+      "gram": "weap",
+      "weight": 0.08
+    },
+    {
+      "gram": "eapo",
+      "weight": 0.08
+    },
+    {
+      "gram": "apon",
+      "weight": 0.08
+    },
+    {
+      "gram": "rici",
+      "weight": 0.08
+    },
+    {
+      "gram": "icin",
+      "weight": 0.08
+    },
+    {
+      "gram": "sari",
+      "weight": 0.08
+    },
+    {
+      "gram": "arin",
+      "weight": 0.08
+    },
+    {
+      "gram": "doxx",
+      "weight": 0.08
+    },
+    {
+      "gram": "oxxi",
+      "weight": 0.08
+    },
+    {
+      "gram": "xxin",
+      "weight": 0.08
+    },
+    {
+      "gram": "xing",
+      "weight": 0.08
+    },
+    {
+      "gram": "swat",
+      "weight": 0.08
+    },
+    {
+      "gram": "watt",
+      "weight": 0.08
+    },
+    {
+      "gram": "atti",
+      "weight": 0.08
+    },
+    {
+      "gram": "ttin",
+      "weight": 0.08
+    },
+    {
+      "gram": "ting",
+      "weight": 0.08
+    },
+    {
+      "gram": "card",
+      "weight": 0.08
+    },
+    {
+      "gram": "ardi",
+      "weight": 0.08
+    },
+    {
+      "gram": "rdin",
+      "weight": 0.08
+    },
+    {
+      "gram": "ding",
+      "weight": 0.08
+    },
+    {
+      "gram": "skim",
+      "weight": 0.08
+    },
+    {
+      "gram": "kimm",
+      "weight": 0.08
+    },
+    {
+      "gram": "imme",
+      "weight": 0.08
+    },
+    {
+      "gram": "mmer",
+      "weight": 0.08
+    },
+    {
+      "gram": "troj",
+      "weight": 0.08
+    },
+    {
+      "gram": "roja",
+      "weight": 0.08
+    },
+    {
+      "gram": "ojan",
+      "weight": 0.08
+    },
+    {
+      "gram": "drop",
+      "weight": 0.08
+    },
+    {
+      "gram": "ropp",
+      "weight": 0.08
+    },
+    {
+      "gram": "oppe",
+      "weight": 0.08
+    },
+    {
+      "gram": "pper",
+      "weight": 0.08
+    },
+    {
+      "gram": "cryp",
+      "weight": 0.08
+    },
+    {
+      "gram": "rypt",
+      "weight": 0.08
+    },
+    {
+      "gram": "ypte",
+      "weight": 0.08
+    },
+    {
+      "gram": "pter",
+      "weight": 0.08
+    },
+    {
+      "gram": "mimi",
+      "weight": 0.08
+    },
+    {
+      "gram": "imik",
+      "weight": 0.08
+    },
+    {
+      "gram": "mika",
+      "weight": 0.08
+    },
+    {
+      "gram": "ikat",
+      "weight": 0.08
+    },
+    {
+      "gram": "katz",
+      "weight": 0.08
+    },
+    {
+      "gram": "ashc",
+      "weight": 0.08
+    },
+    {
+      "gram": "shca",
+      "weight": 0.08
+    },
+    {
+      "gram": "hcat",
+      "weight": 0.08
+    },
+    {
+      "gram": "sqlm",
+      "weight": 0.08
+    },
+    {
+      "gram": "qlma",
+      "weight": 0.08
+    },
+    {
+      "gram": "lmap",
+      "weight": 0.08
+    },
+    {
+      "gram": "etas",
+      "weight": 0.08
+    },
+    {
+      "gram": "tasp",
+      "weight": 0.08
+    },
+    {
+      "gram": "aspl",
+      "weight": 0.08
+    },
+    {
+      "gram": "splo",
+      "weight": 0.08
+    },
+    {
+      "gram": "reve",
+      "weight": 0.08
+    },
+    {
+      "gram": "ever",
+      "weight": 0.08
+    },
+    {
+      "gram": "vers",
+      "weight": 0.08
+    },
+    {
+      "gram": "erse",
+      "weight": 0.08
+    },
+    {
+      "gram": "bind",
+      "weight": 0.08
+    },
+    {
+      "gram": "inds",
+      "weight": 0.08
+    },
+    {
+      "gram": "ndsh",
+      "weight": 0.08
+    },
+    {
+      "gram": "dshe",
+      "weight": 0.08
+    },
+    {
+      "gram": "webs",
+      "weight": 0.08
+    },
+    {
+      "gram": "ebsh",
+      "weight": 0.08
+    },
+    {
+      "gram": "bshe",
+      "weight": 0.08
+    },
+    {
+      "gram": "fork",
+      "weight": 0.08
+    },
+    {
+      "gram": "orkb",
+      "weight": 0.08
+    },
+    {
+      "gram": "rkbo",
+      "weight": 0.08
+    },
+    {
+      "gram": "kbom",
+      "weight": 0.08
+    },
+    {
+      "gram": "rmrf",
+      "weight": 0.08
+    },
+    {
+      "gram": "mkfs",
+      "weight": 0.08
+    },
+    {
+      "gram": "wipe",
+      "weight": 0.08
+    },
+    {
+      "gram": "ipef",
+      "weight": 0.08
+    },
+    {
+      "gram": "pefs",
+      "weight": 0.08
+    },
+    {
+      "gram": "form",
+      "weight": 0.08
+    },
+    {
+      "gram": "orma",
+      "weight": 0.08
+    },
+    {
+      "gram": "rmat",
+      "weight": 0.08
+    },
+    {
+      "gram": "shre",
+      "weight": 0.08
+    },
+    {
+      "gram": "hred",
+      "weight": 0.08
+    },
+    {
+      "gram": "powe",
+      "weight": 0.08
+    },
+    {
+      "gram": "ower",
+      "weight": 0.08
+    },
+    {
+      "gram": "wers",
+      "weight": 0.08
+    },
+    {
+      "gram": "ersh",
+      "weight": 0.08
+    },
+    {
+      "gram": "rshe",
+      "weight": 0.08
+    },
+    {
+      "gram": "enco",
+      "weight": 0.08
+    },
+    {
+      "gram": "ncod",
+      "weight": 0.08
+    },
+    {
+      "gram": "code",
+      "weight": 0.08
+    },
+    {
+      "gram": "oded",
+      "weight": 0.08
+    },
+    {
+      "gram": "invo",
+      "weight": 0.08
+    },
+    {
+      "gram": "nvok",
+      "weight": 0.08
+    },
+    {
+      "gram": "voke",
+      "weight": 0.08
+    },
+    {
+      "gram": "crad",
+      "weight": 0.08
+    },
+    {
+      "gram": "radl",
+      "weight": 0.08
+    },
+    {
+      "gram": "adle",
+      "weight": 0.08
+    },
+    {
+      "gram": "beac",
+      "weight": 0.08
+    },
+    {
+      "gram": "eaco",
+      "weight": 0.08
+    },
+    {
+      "gram": "acon",
+      "weight": 0.08
+    },
+    {
+      "gram": "coba",
+      "weight": 0.08
+    },
+    {
+      "gram": "obal",
+      "weight": 0.08
+    },
+    {
+      "gram": "balt",
+      "weight": 0.08
+    },
+    {
+      "gram": "sliv",
+      "weight": 0.08
+    },
+    {
+      "gram": "live",
+      "weight": 0.08
+    },
+    {
+      "gram": "iver",
+      "weight": 0.08
+    },
+    {
+      "gram": "empi",
+      "weight": 0.08
+    },
+    {
+      "gram": "mpir",
+      "weight": 0.08
+    },
+    {
+      "gram": "pire",
+      "weight": 0.08
+    },
+    {
+      "gram": "kerb",
+      "weight": 0.08
+    },
+    {
+      "gram": "erbe",
+      "weight": 0.08
+    },
+    {
+      "gram": "rber",
+      "weight": 0.08
+    },
+    {
+      "gram": "bero",
+      "weight": 0.08
+    },
+    {
+      "gram": "eroa",
+      "weight": 0.08
+    },
+    {
+      "gram": "roas",
+      "weight": 0.08
+    },
+    {
+      "gram": "oast",
+      "weight": 0.08
+    },
+    {
+      "gram": "dcsy",
+      "weight": 0.08
+    },
+    {
+      "gram": "csyn",
+      "weight": 0.08
+    },
+    {
+      "gram": "sync",
+      "weight": 0.08
+    },
+    {
+      "gram": "assh",
+      "weight": 0.08
+    },
+    {
+      "gram": "ssha",
+      "weight": 0.08
+    },
+    {
+      "gram": "shas",
+      "weight": 0.08
+    },
+    {
+      "gram": "gold",
+      "weight": 0.08
+    },
+    {
+      "gram": "olde",
+      "weight": 0.08
+    },
+    {
+      "gram": "lden",
+      "weight": 0.08
+    },
+    {
+      "gram": "silv",
+      "weight": 0.08
+    },
+    {
+      "gram": "ilve",
+      "weight": 0.08
+    },
+    {
+      "gram": "lver",
+      "weight": 0.08
+    },
+    {
+      "gram": "tick",
+      "weight": 0.08
+    },
+    {
+      "gram": "icke",
+      "weight": 0.08
+    },
+    {
+      "gram": "lsas",
+      "weight": 0.08
+    },
+    {
+      "gram": "sass",
+      "weight": 0.08
+    },
+    {
+      "gram": "ntds",
+      "weight": 0.08
+    },
+    {
+      "gram": "samd",
+      "weight": 0.08
+    },
+    {
+      "gram": "amdu",
+      "weight": 0.08
+    },
+    {
+      "gram": "mdum",
+      "weight": 0.08
+    },
+    {
+      "gram": "ssrf",
+      "weight": 0.08
+    },
+    {
+      "gram": "ssti",
+      "weight": 0.08
+    },
+    {
+      "gram": "sqli",
+      "weight": 0.08
+    },
+    {
+      "gram": "priv",
+      "weight": 0.08
+    },
+    {
+      "gram": "rive",
+      "weight": 0.08
+    },
+    {
+      "gram": "ives",
+      "weight": 0.08
+    },
+    {
+      "gram": "vesc",
+      "weight": 0.08
+    },
+    {
+      "gram": "pers",
+      "weight": 0.08
+    },
+    {
+      "gram": "ersi",
+      "weight": 0.08
+    },
+    {
+      "gram": "rsis",
+      "weight": 0.08
+    },
+    {
+      "gram": "sist",
+      "weight": 0.08
+    },
+    {
+      "gram": "iste",
+      "weight": 0.08
+    },
+    {
+      "gram": "sten",
+      "weight": 0.08
+    },
+    {
+      "gram": "tenc",
+      "weight": 0.08
+    },
+    {
+      "gram": "ence",
+      "weight": 0.08
+    },
+    {
+      "gram": "late",
+      "weight": 0.08
+    },
+    {
+      "gram": "ater",
+      "weight": 0.08
+    },
+    {
+      "gram": "tera",
+      "weight": 0.08
+    },
+    {
+      "gram": "eral",
+      "weight": 0.08
+    },
+    {
+      "gram": "amsi",
+      "weight": 0.08
+    },
+    {
+      "gram": "etwb",
+      "weight": 0.08
+    },
+    {
+      "gram": "twby",
+      "weight": 0.08
+    },
+    {
+      "gram": "wbyp",
+      "weight": 0.08
+    },
+    {
+      "gram": "uacb",
+      "weight": 0.08
+    },
+    {
+      "gram": "acby",
+      "weight": 0.08
+    },
+    {
+      "gram": "cbyp",
+      "weight": 0.08
+    },
+    {
+      "gram": "lolb",
+      "weight": 0.08
+    },
+    {
+      "gram": "olbi",
+      "weight": 0.08
+    },
+    {
+      "gram": "lbin",
+      "weight": 0.08
+    },
+    {
+      "gram": "cert",
+      "weight": 0.08
+    },
+    {
+      "gram": "ertu",
+      "weight": 0.08
+    },
+    {
+      "gram": "rtut",
+      "weight": 0.08
+    },
+    {
+      "gram": "tuti",
+      "weight": 0.08
+    },
+    {
+      "gram": "util",
+      "weight": 0.08
+    },
+    {
+      "gram": "msht",
+      "weight": 0.08
+    },
+    {
+      "gram": "shta",
+      "weight": 0.08
+    },
+    {
+      "gram": "bits",
+      "weight": 0.08
+    },
+    {
+      "gram": "itsa",
+      "weight": 0.08
+    },
+    {
+      "gram": "tsad",
+      "weight": 0.08
+    },
+    {
+      "gram": "sadm",
+      "weight": 0.08
+    },
+    {
+      "gram": "admi",
+      "weight": 0.08
+    },
+    {
+      "gram": "dmin",
+      "weight": 0.08
+    },
+    {
+      "gram": "wmic",
+      "weight": 0.08
+    },
+    {
+      "gram": "impa",
+      "weight": 0.08
+    },
+    {
+      "gram": "mpac",
+      "weight": 0.08
+    },
+    {
+      "gram": "pack",
+      "weight": 0.08
+    },
+    {
+      "gram": "acke",
+      "weight": 0.08
+    },
+    {
+      "gram": "bloo",
+      "weight": 0.08
+    },
+    {
+      "gram": "lood",
+      "weight": 0.08
+    },
+    {
+      "gram": "oodh",
+      "weight": 0.08
+    },
+    {
+      "gram": "odho",
+      "weight": 0.08
+    },
+    {
+      "gram": "dhou",
+      "weight": 0.08
+    },
+    {
+      "gram": "houn",
+      "weight": 0.08
+    },
+    {
+      "gram": "ound",
+      "weight": 0.08
+    },
+    {
+      "gram": "resp",
+      "weight": 0.08
+    },
+    {
+      "gram": "espo",
+      "weight": 0.08
+    },
+    {
+      "gram": "spon",
+      "weight": 0.08
+    },
+    {
+      "gram": "pond",
+      "weight": 0.08
+    },
+    {
+      "gram": "onde",
+      "weight": 0.08
+    },
+    {
+      "gram": "nder",
+      "weight": 0.08
+    },
+    {
+      "gram": "vilg",
+      "weight": 0.08
+    },
+    {
+      "gram": "ilgi",
+      "weight": 0.08
+    },
+    {
+      "gram": "lgin",
+      "weight": 0.08
+    },
+    {
+      "gram": "ginx",
+      "weight": 0.08
+    },
+    {
+      "gram": "aitm",
+      "weight": 0.08
+    },
+    {
+      "gram": "mitm",
+      "weight": 0.08
+    },
+    {
+      "gram": "typo",
+      "weight": 0.08
+    },
+    {
+      "gram": "ypos",
+      "weight": 0.08
+    },
+    {
+      "gram": "posq",
+      "weight": 0.08
+    },
+    {
+      "gram": "osqu",
+      "weight": 0.08
+    },
+    {
+      "gram": "squa",
+      "weight": 0.08
+    },
+    {
+      "gram": "quat",
+      "weight": 0.08
+    },
+    {
+      "gram": "supp",
+      "weight": 0.08
+    },
+    {
+      "gram": "uppl",
+      "weight": 0.08
+    },
+    {
+      "gram": "pply",
+      "weight": 0.08
+    },
+    {
+      "gram": "plyc",
+      "weight": 0.08
+    },
+    {
+      "gram": "lych",
+      "weight": 0.08
+    },
+    {
+      "gram": "ycha",
+      "weight": 0.08
+    },
+    {
+      "gram": "chai",
+      "weight": 0.08
+    },
+    {
+      "gram": "hain",
+      "weight": 0.08
+    },
+    {
+      "gram": "onta",
+      "weight": 0.08
+    },
+    {
+      "gram": "ntai",
+      "weight": 0.08
+    },
+    {
+      "gram": "tain",
+      "weight": 0.08
+    },
+    {
+      "gram": "aine",
+      "weight": 0.08
+    },
+    {
+      "gram": "iner",
+      "weight": 0.08
+    },
+    {
+      "gram": "nere",
+      "weight": 0.08
+    },
+    {
+      "gram": "eres",
+      "weight": 0.08
+    },
+    {
+      "gram": "resc",
+      "weight": 0.08
+    },
+    {
+      "gram": "esca",
+      "weight": 0.08
+    },
+    {
+      "gram": "scap",
+      "weight": 0.08
+    },
+    {
+      "gram": "cape",
+      "weight": 0.08
+    },
+    {
+      "gram": "imds",
+      "weight": 0.08
+    },
+    {
+      "gram": "etad",
+      "weight": 0.08
+    },
+    {
+      "gram": "tada",
+      "weight": 0.08
+    },
+    {
+      "gram": "adat",
+      "weight": 0.08
+    },
+    {
+      "gram": "data",
+      "weight": 0.08
+    },
+    {
+      "gram": "filt",
+      "weight": 0.08
+    },
+    {
+      "gram": "iltr",
+      "weight": 0.08
+    },
+    {
+      "gram": "ltra",
+      "weight": 0.08
+    },
+    {
+      "gram": "trat",
+      "weight": 0.08
+    },
+    {
+      "gram": "rati",
+      "weight": 0.08
+    },
+    {
+      "gram": "atio",
+      "weight": 0.08
+    },
+    {
+      "gram": "cred",
+      "weight": 0.08
+    },
+    {
+      "gram": "rede",
+      "weight": 0.08
+    },
+    {
+      "gram": "eden",
+      "weight": 0.08
+    },
+    {
+      "gram": "dent",
+      "weight": 0.08
+    },
+    {
+      "gram": "enti",
+      "weight": 0.08
+    },
+    {
+      "gram": "ntia",
+      "weight": 0.08
+    },
+    {
+      "gram": "tial",
+      "weight": 0.08
+    },
+    {
+      "gram": "stuf",
+      "weight": 0.08
+    },
+    {
+      "gram": "tuff",
+      "weight": 0.08
+    },
+    {
+      "gram": "uffi",
+      "weight": 0.08
+    },
+    {
+      "gram": "ffin",
+      "weight": 0.08
+    },
+    {
+      "gram": "fing",
+      "weight": 0.08
+    },
+    {
+      "gram": "spra",
+      "weight": 0.08
+    },
+    {
+      "gram": "pray",
+      "weight": 0.08
+    },
+    {
+      "gram": "rayi",
+      "weight": 0.08
+    },
+    {
+      "gram": "ayin",
+      "weight": 0.08
+    },
+    {
+      "gram": "ying",
+      "weight": 0.08
+    },
+    {
+      "gram": "otps",
+      "weight": 0.08
+    },
+    {
+      "gram": "tpst",
+      "weight": 0.08
+    },
+    {
+      "gram": "pste",
+      "weight": 0.08
+    },
+    {
+      "gram": "sims",
+      "weight": 0.08
+    },
+    {
+      "gram": "imsw",
+      "weight": 0.08
+    },
+    {
+      "gram": "mswa",
+      "weight": 0.08
+    },
+    {
+      "gram": "swap",
+      "weight": 0.08
+    },
+    {
+      "gram": "deep",
+      "weight": 0.08
+    },
+    {
+      "gram": "eepf",
+      "weight": 0.08
+    },
+    {
+      "gram": "epfa",
+      "weight": 0.08
+    },
+    {
+      "gram": "pfak",
+      "weight": 0.08
+    },
+    {
+      "gram": "fake",
+      "weight": 0.08
+    },
+    {
+      "gram": "sext",
+      "weight": 0.08
+    },
+    {
+      "gram": "exto",
+      "weight": 0.08
+    },
+    {
+      "gram": "xtor",
+      "weight": 0.08
+    },
+    {
+      "gram": "tort",
+      "weight": 0.08
+    },
+    {
+      "gram": "orti",
+      "weight": 0.08
+    },
+    {
+      "gram": "rtio",
+      "weight": 0.08
+    },
+    {
+      "gram": "stal",
+      "weight": 0.08
+    },
+    {
+      "gram": "talk",
+      "weight": 0.08
+    },
+    {
+      "gram": "alke",
+      "weight": 0.08
+    },
+    {
+      "gram": "lker",
+      "weight": 0.08
+    },
+    {
+      "gram": "kerw",
+      "weight": 0.08
+    },
+    {
+      "gram": "erwa",
+      "weight": 0.08
+    },
+    {
+      "gram": "rwar",
+      "weight": 0.08
+    },
+    {
+      "gram": "spyw",
+      "weight": 0.08
+    },
+    {
+      "gram": "pywa",
+      "weight": 0.08
+    },
+    {
+      "gram": "ywar",
+      "weight": 0.08
+    },
+    {
+      "gram": "info",
+      "weight": 0.08
+    },
+    {
+      "gram": "nfos",
+      "weight": 0.08
+    },
+    {
+      "gram": "fost",
+      "weight": 0.08
+    },
+    {
+      "gram": "oste",
+      "weight": 0.08
+    },
+    {
+      "gram": "eale",
+      "weight": 0.08
+    },
+    {
+      "gram": "aler",
+      "weight": 0.08
+    },
+    {
+      "gram": "redl",
+      "weight": 0.08
+    },
+    {
+      "gram": "edli",
+      "weight": 0.08
+    },
+    {
+      "gram": "dlin",
+      "weight": 0.08
+    },
+    {
+      "gram": "line",
+      "weight": 0.08
+    },
+    {
+      "gram": "lock",
+      "weight": 0.08
+    },
+    {
+      "gram": "ockb",
+      "weight": 0.08
+    },
+    {
+      "gram": "ckbi",
+      "weight": 0.08
+    },
+    {
+      "gram": "kbit",
+      "weight": 0.08
+    },
+    {
+      "gram": "blac",
+      "weight": 0.08
+    },
+    {
+      "gram": "lack",
+      "weight": 0.08
+    },
+    {
+      "gram": "ackc",
+      "weight": 0.08
+    },
+    {
+      "gram": "ckca",
+      "weight": 0.08
+    },
+    {
+      "gram": "kcat",
+      "weight": 0.08
+    },
+    {
+      "gram": "onti",
+      "weight": 0.08
+    },
+    {
+      "gram": "revi",
+      "weight": 0.08
+    },
+    {
+      "gram": "hac",
+      "weight": 0.05
+    },
+    {
+      "gram": "exp",
+      "weight": 0.05
+    },
+    {
+      "gram": "xpl",
+      "weight": 0.05
+    },
+    {
+      "gram": "mal",
+      "weight": 0.05
+    },
+    {
+      "gram": "alw",
+      "weight": 0.05
+    },
+    {
+      "gram": "lwa",
+      "weight": 0.05
+    },
+    {
+      "gram": "ran",
+      "weight": 0.05
+    },
+    {
+      "gram": "ans",
+      "weight": 0.05
+    },
+    {
+      "gram": "nso",
+      "weight": 0.05
+    },
+    {
+      "gram": "som",
+      "weight": 0.05
+    },
+    {
+      "gram": "phi",
+      "weight": 0.05
+    },
+    {
+      "gram": "his",
+      "weight": 0.05
+    },
+    {
+      "gram": "ish",
+      "weight": 0.05
+    },
+    {
+      "gram": "pay",
+      "weight": 0.05
+    },
+    {
+      "gram": "ayl",
+      "weight": 0.05
+    },
+    {
+      "gram": "loa",
+      "weight": 0.05
+    },
+    {
+      "gram": "oad",
+      "weight": 0.05
+    },
+    {
+      "gram": "roo",
+      "weight": 0.05
+    },
+    {
+      "gram": "oot",
+      "weight": 0.05
+    },
+    {
+      "gram": "otk",
+      "weight": 0.05
+    },
+    {
+      "gram": "tki",
+      "weight": 0.05
+    },
+    {
+      "gram": "kit",
+      "weight": 0.05
+    },
+    {
+      "gram": "key",
+      "weight": 0.05
+    },
+    {
+      "gram": "eyl",
+      "weight": 0.05
+    },
+    {
+      "gram": "log",
+      "weight": 0.05
+    },
+    {
+      "gram": "bot",
+      "weight": 0.05
+    },
+    {
+      "gram": "otn",
+      "weight": 0.05
+    },
+    {
+      "gram": "tne",
+      "weight": 0.05
+    },
+    {
+      "gram": "net",
+      "weight": 0.05
+    },
+    {
+      "gram": "bac",
+      "weight": 0.05
+    },
+    {
+      "gram": "ckd",
+      "weight": 0.05
+    },
+    {
+      "gram": "kdo",
+      "weight": 0.05
+    },
+    {
+      "gram": "doo",
+      "weight": 0.05
+    },
+    {
+      "gram": "oor",
+      "weight": 0.05
+    },
+    {
+      "gram": "jai",
+      "weight": 0.05
+    },
+    {
+      "gram": "ail",
+      "weight": 0.05
+    },
+    {
+      "gram": "ilb",
+      "weight": 0.05
+    },
+    {
+      "gram": "lbr",
+      "weight": 0.05
+    },
+    {
+      "gram": "bre",
+      "weight": 0.05
+    },
+    {
+      "gram": "rea",
+      "weight": 0.05
+    },
+    {
+      "gram": "eak",
+      "weight": 0.05
+    },
+    {
+      "gram": "inj",
+      "weight": 0.05
+    },
+    {
+      "gram": "nje",
+      "weight": 0.05
+    },
+    {
+      "gram": "jec",
+      "weight": 0.05
+    },
+    {
+      "gram": "ect",
+      "weight": 0.05
+    },
+    {
+      "gram": "ove",
+      "weight": 0.05
+    },
+    {
+      "gram": "erf",
+      "weight": 0.05
+    },
+    {
+      "gram": "rfl",
+      "weight": 0.05
+    },
+    {
+      "gram": "flo",
+      "weight": 0.05
+    },
+    {
+      "gram": "low",
+      "weight": 0.05
+    },
+    {
+      "gram": "rac",
+      "weight": 0.05
+    },
+    {
+      "gram": "bru",
+      "weight": 0.05
+    },
+    {
+      "gram": "rut",
+      "weight": 0.05
+    },
+    {
+      "gram": "ute",
+      "weight": 0.05
+    },
+    {
+      "gram": "tef",
+      "weight": 0.05
+    },
+    {
+      "gram": "efo",
+      "weight": 0.05
+    },
+    {
+      "gram": "orc",
+      "weight": 0.05
+    },
+    {
+      "gram": "wea",
+      "weight": 0.05
+    },
+    {
+      "gram": "eap",
+      "weight": 0.05
+    },
+    {
+      "gram": "apo",
+      "weight": 0.05
+    },
+    {
+      "gram": "ric",
+      "weight": 0.05
+    },
+    {
+      "gram": "ici",
+      "weight": 0.05
+    },
+    {
+      "gram": "cin",
+      "weight": 0.05
+    },
+    {
+      "gram": "sar",
+      "weight": 0.05
+    },
+    {
+      "gram": "ari",
+      "weight": 0.05
+    },
+    {
+      "gram": "rin",
+      "weight": 0.05
+    },
+    {
+      "gram": "dox",
+      "weight": 0.05
+    },
+    {
+      "gram": "oxx",
+      "weight": 0.05
+    },
+    {
+      "gram": "xxi",
+      "weight": 0.05
+    },
+    {
+      "gram": "xin",
+      "weight": 0.05
+    },
+    {
+      "gram": "wat",
+      "weight": 0.05
+    },
+    {
+      "gram": "att",
+      "weight": 0.05
+    },
+    {
+      "gram": "tti",
+      "weight": 0.05
+    },
+    {
+      "gram": "tin",
+      "weight": 0.05
+    },
+    {
+      "gram": "car",
+      "weight": 0.05
+    },
+    {
+      "gram": "ard",
+      "weight": 0.05
+    },
+    {
+      "gram": "rdi",
+      "weight": 0.05
+    },
+    {
+      "gram": "din",
+      "weight": 0.05
+    },
+    {
+      "gram": "ski",
+      "weight": 0.05
+    },
+    {
+      "gram": "kim",
+      "weight": 0.05
+    },
+    {
+      "gram": "imm",
+      "weight": 0.05
+    },
+    {
+      "gram": "mme",
+      "weight": 0.05
+    },
+    {
+      "gram": "mer",
+      "weight": 0.05
+    },
+    {
+      "gram": "tro",
+      "weight": 0.05
+    },
+    {
+      "gram": "roj",
+      "weight": 0.05
+    },
+    {
+      "gram": "oja",
+      "weight": 0.05
+    },
+    {
+      "gram": "jan",
+      "weight": 0.05
+    },
+    {
+      "gram": "dro",
+      "weight": 0.05
+    },
+    {
+      "gram": "rop",
+      "weight": 0.05
+    },
+    {
+      "gram": "opp",
+      "weight": 0.05
+    },
+    {
+      "gram": "ppe",
+      "weight": 0.05
+    },
+    {
+      "gram": "cry",
+      "weight": 0.05
+    },
+    {
+      "gram": "ryp",
+      "weight": 0.05
+    },
+    {
+      "gram": "ypt",
+      "weight": 0.05
+    },
+    {
+      "gram": "pte",
+      "weight": 0.05
+    },
+    {
+      "gram": "mim",
+      "weight": 0.05
+    },
+    {
+      "gram": "imi",
+      "weight": 0.05
+    },
+    {
+      "gram": "mik",
+      "weight": 0.05
+    },
+    {
+      "gram": "ika",
+      "weight": 0.05
+    },
+    {
+      "gram": "kat",
+      "weight": 0.05
+    },
+    {
+      "gram": "atz",
+      "weight": 0.05
+    },
+    {
+      "gram": "shc",
+      "weight": 0.05
+    },
+    {
+      "gram": "hca",
+      "weight": 0.05
+    },
+    {
+      "gram": "qlm",
+      "weight": 0.05
+    },
+    {
+      "gram": "lma",
+      "weight": 0.05
+    },
+    {
+      "gram": "map",
+      "weight": 0.05
+    },
+    {
+      "gram": "tas",
+      "weight": 0.05
+    },
+    {
+      "gram": "asp",
+      "weight": 0.05
+    },
+    {
+      "gram": "spl",
+      "weight": 0.05
+    },
+    {
+      "gram": "eve",
+      "weight": 0.05
+    },
+    {
+      "gram": "rse",
+      "weight": 0.05
+    },
+    {
+      "gram": "ind",
+      "weight": 0.05
+    },
+    {
+      "gram": "nds",
+      "weight": 0.05
+    },
+    {
+      "gram": "dsh",
+      "weight": 0.05
+    },
+    {
+      "gram": "web",
+      "weight": 0.05
+    },
+    {
+      "gram": "ebs",
+      "weight": 0.05
+    },
+    {
+      "gram": "bsh",
+      "weight": 0.05
+    },
+    {
+      "gram": "ork",
+      "weight": 0.05
+    },
+    {
+      "gram": "rkb",
+      "weight": 0.05
+    },
+    {
+      "gram": "kbo",
+      "weight": 0.05
+    },
+    {
+      "gram": "rmr",
+      "weight": 0.05
+    },
+    {
+      "gram": "mrf",
+      "weight": 0.05
+    },
+    {
+      "gram": "mkf",
+      "weight": 0.05
+    },
+    {
+      "gram": "kfs",
+      "weight": 0.05
+    },
+    {
+      "gram": "wip",
+      "weight": 0.05
+    },
+    {
+      "gram": "ipe",
+      "weight": 0.05
+    },
+    {
+      "gram": "pef",
+      "weight": 0.05
+    },
+    {
+      "gram": "efs",
+      "weight": 0.05
+    },
+    {
+      "gram": "orm",
+      "weight": 0.05
+    },
+    {
+      "gram": "rma",
+      "weight": 0.05
+    },
+    {
+      "gram": "mat",
+      "weight": 0.05
+    },
+    {
+      "gram": "shr",
+      "weight": 0.05
+    },
+    {
+      "gram": "hre",
+      "weight": 0.05
+    },
+    {
+      "gram": "pow",
+      "weight": 0.05
+    },
+    {
+      "gram": "owe",
+      "weight": 0.05
+    },
+    {
+      "gram": "wer",
+      "weight": 0.05
+    },
+    {
+      "gram": "rsh",
+      "weight": 0.05
+    },
+    {
+      "gram": "nco",
+      "weight": 0.05
+    },
+    {
+      "gram": "cod",
+      "weight": 0.05
+    },
+    {
+      "gram": "ode",
+      "weight": 0.05
+    },
+    {
+      "gram": "ded",
+      "weight": 0.05
+    },
+    {
+      "gram": "inv",
+      "weight": 0.05
+    },
+    {
+      "gram": "nvo",
+      "weight": 0.05
+    },
+    {
+      "gram": "vok",
+      "weight": 0.05
+    },
+    {
+      "gram": "oke",
+      "weight": 0.05
+    },
+    {
+      "gram": "rad",
+      "weight": 0.05
+    },
+    {
+      "gram": "adl",
+      "weight": 0.05
+    },
+    {
+      "gram": "dle",
+      "weight": 0.05
+    },
+    {
+      "gram": "bea",
+      "weight": 0.05
+    },
+    {
+      "gram": "eac",
+      "weight": 0.05
+    },
+    {
+      "gram": "aco",
+      "weight": 0.05
+    },
+    {
+      "gram": "cob",
+      "weight": 0.05
+    },
+    {
+      "gram": "oba",
+      "weight": 0.05
+    },
+    {
+      "gram": "bal",
+      "weight": 0.05
+    },
+    {
+      "gram": "alt",
+      "weight": 0.05
+    },
+    {
+      "gram": "sli",
+      "weight": 0.05
+    },
+    {
+      "gram": "liv",
+      "weight": 0.05
+    },
+    {
+      "gram": "emp",
+      "weight": 0.05
+    },
+    {
+      "gram": "mpi",
+      "weight": 0.05
+    },
+    {
+      "gram": "pir",
+      "weight": 0.05
+    },
+    {
+      "gram": "ire",
+      "weight": 0.05
+    },
+    {
+      "gram": "erb",
+      "weight": 0.05
+    },
+    {
+      "gram": "rbe",
+      "weight": 0.05
+    },
+    {
+      "gram": "ber",
+      "weight": 0.05
+    },
+    {
+      "gram": "ero",
+      "weight": 0.05
+    },
+    {
+      "gram": "roa",
+      "weight": 0.05
+    },
+    {
+      "gram": "oas",
+      "weight": 0.05
+    },
+    {
+      "gram": "ast",
+      "weight": 0.05
+    }
+  ]
+}

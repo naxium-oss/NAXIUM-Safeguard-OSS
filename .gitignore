@@ -1,0 +1,9 @@
+node_modules
+dist
+logs
+.env
+*.log
+coverage
+.DS_Store
+awesome-jailbreak-repo
+*.tgz

@@ -1,0 +1,26 @@
+# Instructions
+
+## Lessons
+
+### Cursor learned
+- Apache-2.0 + enderchefcoder copyright headers on source
+- Don't leave one-off generate/add scripts as permanent surface unless documented as maintainers tools
+- User wants professional/honest naming — avoid "insane" in public docs/CI/script names
+- Short TF-IDF/n-gram FP fixes; TUI no trim-on-keystroke
+
+### User Specified Lessons
+- venv; multiline git via file + `[Cursor] `
+
+# Scratchpad
+
+## Current task
+100% overhaul CI/docs/tests/AGENTS/CONTRIBUTING + cleanup — COMPLETE
+
+## Progress
+[X] Removed generateInsane* / generateExpandedPhrases; kept copy-assets, headers, awesome fixture regen
+[X] Moved bib titles to test/fixtures; renamed regenerateAwesomeJailbreakFixtures
+[X] CI: quality → matrix test → coverage artifact; concurrency + permissions
+[X] AGENTS.md, CONTRIBUTING.md, docs/TESTING.md; ARCHITECTURE/LIMITATIONS/SECURITY refreshed
+[X] Tests renamed/consolidated (detectorLayers, packaging); lint fixed
+[X] npm run ci + coverage green (456 tests)
+[ ] Commit — waiting for user request

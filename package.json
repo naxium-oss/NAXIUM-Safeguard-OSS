@@ -1,0 +1,96 @@
+{
+  "name": "naxium-safeguard-oss",
+  "version": "0.2.0",
+  "description": "Local-first, multi-layer heuristic safeguard for LLM inputs, outputs, and tool calls. Apache-2.0.",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "enderchefcoder",
+    "url": "https://github.com/enderchefcoder"
+  },
+  "homepage": "https://github.com/enderchefcoder/naxium-safeguard-oss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enderchefcoder/naxium-safeguard-oss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/enderchefcoder/naxium-safeguard-oss/issues"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "naxiguard": "dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs",
+    "prepublishOnly": "npm run build",
+    "dev": "tsx watch src/server/httpServer.ts",
+    "start": "node dist/server/httpServer.js",
+    "cli": "tsx src/cli/index.ts",
+    "tui": "bun src/cli/index.ts",
+    "tui:node": "tsx src/cli/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "headers": "node scripts/addLicenseHeaders.mjs",
+    "fixtures:awesome-jailbreak": "node scripts/regenerateAwesomeJailbreakFixtures.mjs",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" \"test/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "ci": "npm run typecheck && npm run lint && npm test && npm run build"
+  },
+  "overrides": {
+    "ink-text-input": {
+      "ink": "$ink"
+    },
+    "esbuild": "^0.25.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ink": "^4.4.1",
+    "ink-text-input": "^5.0.1",
+    "react": "^18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/supertest": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "@vitest/coverage-v8": "^1.6.1",
+    "eslint": "^8.57.0",
+    "supertest": "^7.2.2",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.2",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "llm",
+    "safeguard",
+    "prompt-injection",
+    "jailbreak",
+    "moderation",
+    "ssrf",
+    "security",
+    "apache-2.0"
+  ]
+}

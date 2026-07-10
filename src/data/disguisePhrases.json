@@ -1,0 +1,2030 @@
+{
+  "innocentFramings": [
+    {
+      "phrase": "for a school project",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for my homework",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for educational purposes",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for education only",
+      "weight": 0.25
+    },
+    {
+      "phrase": "just curious",
+      "weight": 0.25
+    },
+    {
+      "phrase": "out of curiosity",
+      "weight": 0.25
+    },
+    {
+      "phrase": "asking for a friend",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a friend",
+      "weight": 0.25
+    },
+    {
+      "phrase": "in a novel",
+      "weight": 0.25
+    },
+    {
+      "phrase": "in my novel",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a fictional story",
+      "weight": 0.25
+    },
+    {
+      "phrase": "fictional scenario",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a screenplay",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a movie script",
+      "weight": 0.25
+    },
+    {
+      "phrase": "thought experiment",
+      "weight": 0.25
+    },
+    {
+      "phrase": "purely hypothetical",
+      "weight": 0.25
+    },
+    {
+      "phrase": "hypothetically speaking",
+      "weight": 0.25
+    },
+    {
+      "phrase": "as a thought experiment",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for research purposes",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for my research paper",
+      "weight": 0.25
+    },
+    {
+      "phrase": "academic research",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a ctf",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a capture the flag",
+      "weight": 0.25
+    },
+    {
+      "phrase": "authorized testing only",
+      "weight": 0.25
+    },
+    {
+      "phrase": "in a sandbox",
+      "weight": 0.25
+    },
+    {
+      "phrase": "in a lab environment",
+      "weight": 0.25
+    },
+    {
+      "phrase": "roleplay only",
+      "weight": 0.25
+    },
+    {
+      "phrase": "just roleplaying",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for worldbuilding",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a game mechanic",
+      "weight": 0.25
+    },
+    {
+      "phrase": "in a video game",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for game design",
+      "weight": 0.25
+    },
+    {
+      "phrase": "no wrongdoing intended",
+      "weight": 0.25
+    },
+    {
+      "phrase": "not going to do it",
+      "weight": 0.25
+    },
+    {
+      "phrase": "i would never actually",
+      "weight": 0.25
+    },
+    {
+      "phrase": "theoretically speaking",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for awareness training",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for security awareness",
+      "weight": 0.25
+    },
+    {
+      "phrase": "to protect myself",
+      "weight": 0.25
+    },
+    {
+      "phrase": "so i can defend against",
+      "weight": 0.25
+    },
+    {
+      "phrase": "to better secure",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for defensive purposes",
+      "weight": 0.25
+    },
+    {
+      "phrase": "blue team training",
+      "weight": 0.25
+    },
+    {
+      "phrase": "red team training",
+      "weight": 0.25
+    },
+    {
+      "phrase": "penetration testing course",
+      "weight": 0.25
+    },
+    {
+      "phrase": "my professor asked",
+      "weight": 0.25
+    },
+    {
+      "phrase": "my teacher wants",
+      "weight": 0.25
+    },
+    {
+      "phrase": "interview question",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a blog post",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for a youtube video",
+      "weight": 0.25
+    },
+    {
+      "phrase": "explain like i am five",
+      "weight": 0.25
+    },
+    {
+      "phrase": "in simple terms",
+      "weight": 0.25
+    },
+    {
+      "phrase": "without the moral lecture",
+      "weight": 0.25
+    },
+    {
+      "phrase": "skip the ethics",
+      "weight": 0.25
+    },
+    {
+      "phrase": "no lectures please",
+      "weight": 0.25
+    },
+    {
+      "phrase": "don't lecture me",
+      "weight": 0.25
+    },
+    {
+      "phrase": "don't moralize",
+      "weight": 0.25
+    },
+    {
+      "phrase": "be direct and practical",
+      "weight": 0.25
+    },
+    {
+      "phrase": "practical steps only",
+      "weight": 0.25
+    },
+    {
+      "phrase": "step by step guide",
+      "weight": 0.25
+    },
+    {
+      "phrase": "detailed walkthrough",
+      "weight": 0.25
+    },
+    {
+      "phrase": "working example please",
+      "weight": 0.25
+    },
+    {
+      "phrase": "real world example",
+      "weight": 0.25
+    },
+    {
+      "phrase": "production ready",
+      "weight": 0.25
+    },
+    {
+      "phrase": "copy paste ready",
+      "weight": 0.25
+    },
+    {
+      "phrase": "give me the code",
+      "weight": 0.25
+    },
+    {
+      "phrase": "give me the payload",
+      "weight": 0.25
+    },
+    {
+      "phrase": "exact commands",
+      "weight": 0.25
+    },
+    {
+      "phrase": "exact steps",
+      "weight": 0.25
+    },
+    {
+      "phrase": "don't hold back",
+      "weight": 0.25
+    },
+    {
+      "phrase": "be completely honest",
+      "weight": 0.25
+    },
+    {
+      "phrase": "unfiltered answer",
+      "weight": 0.25
+    },
+    {
+      "phrase": "raw technical details",
+      "weight": 0.25
+    },
+    {
+      "phrase": "as an expert would",
+      "weight": 0.25
+    },
+    {
+      "phrase": "between us",
+      "weight": 0.25
+    },
+    {
+      "phrase": "off the record",
+      "weight": 0.25
+    },
+    {
+      "phrase": "privately speaking",
+      "weight": 0.25
+    },
+    {
+      "phrase": "this stays between us",
+      "weight": 0.25
+    },
+    {
+      "phrase": "i already know how",
+      "weight": 0.25
+    },
+    {
+      "phrase": "just confirming",
+      "weight": 0.25
+    },
+    {
+      "phrase": "refresh my memory",
+      "weight": 0.25
+    },
+    {
+      "phrase": "i forgot the details",
+      "weight": 0.25
+    },
+    {
+      "phrase": "remind me how",
+      "weight": 0.25
+    },
+    {
+      "phrase": "continue from where",
+      "weight": 0.25
+    },
+    {
+      "phrase": "finish the instructions",
+      "weight": 0.25
+    },
+    {
+      "phrase": "complete the recipe",
+      "weight": 0.25
+    },
+    {
+      "phrase": "fill in the blanks",
+      "weight": 0.25
+    },
+    {
+      "phrase": "the missing steps are",
+      "weight": 0.25
+    },
+    {
+      "phrase": "what comes after",
+      "weight": 0.25
+    },
+    {
+      "phrase": "and then what",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for my thesis",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for the exam",
+      "weight": 0.25
+    },
+    {
+      "phrase": "my boss told me to ask",
+      "weight": 0.25
+    },
+    {
+      "phrase": "security training slide",
+      "weight": 0.25
+    },
+    {
+      "phrase": "tabletop exercise",
+      "weight": 0.25
+    },
+    {
+      "phrase": "purple team exercise",
+      "weight": 0.25
+    },
+    {
+      "phrase": "bug bounty writeup",
+      "weight": 0.25
+    },
+    {
+      "phrase": "responsible disclosure draft",
+      "weight": 0.25
+    },
+    {
+      "phrase": "i already have permission allegedly",
+      "weight": 0.25
+    },
+    {
+      "phrase": "on a machine i own supposedly",
+      "weight": 0.25
+    },
+    {
+      "phrase": "lab vm only pinky promise",
+      "weight": 0.25
+    },
+    {
+      "phrase": "docker playground",
+      "weight": 0.25
+    },
+    {
+      "phrase": "local only i swear",
+      "weight": 0.25
+    },
+    {
+      "phrase": "airgapped demo",
+      "weight": 0.25
+    },
+    {
+      "phrase": "conference talk demo",
+      "weight": 0.25
+    },
+    {
+      "phrase": "workshop handout",
+      "weight": 0.25
+    },
+    {
+      "phrase": "cheatsheet for students",
+      "weight": 0.25
+    },
+    {
+      "phrase": "anki flashcards",
+      "weight": 0.25
+    },
+    {
+      "phrase": "study guide",
+      "weight": 0.25
+    },
+    {
+      "phrase": "certification prep",
+      "weight": 0.25
+    },
+    {
+      "phrase": "oscp style",
+      "weight": 0.25
+    },
+    {
+      "phrase": "pnpt practice",
+      "weight": 0.25
+    },
+    {
+      "phrase": "hackthebox writeup style",
+      "weight": 0.25
+    },
+    {
+      "phrase": "tryhackme walkthrough",
+      "weight": 0.25
+    },
+    {
+      "phrase": "htb retired box",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for the certification lab",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for the range exercise",
+      "weight": 0.25
+    },
+    {
+      "phrase": "on the practice vlan",
+      "weight": 0.25
+    },
+    {
+      "phrase": "in the malware zoo",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for the detection engineering blog",
+      "weight": 0.25
+    },
+    {
+      "phrase": "so i can write yara rules",
+      "weight": 0.25
+    },
+    {
+      "phrase": "so i can write sigma rules",
+      "weight": 0.25
+    },
+    {
+      "phrase": "to tune our siem",
+      "weight": 0.25
+    },
+    {
+      "phrase": "to test our edr",
+      "weight": 0.25
+    },
+    {
+      "phrase": "purple team scenario only",
+      "weight": 0.25
+    },
+    {
+      "phrase": "tabletop inject",
+      "weight": 0.25
+    },
+    {
+      "phrase": "executive briefing demo",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for compliance training",
+      "weight": 0.25
+    },
+    {
+      "phrase": "for tabletop only",
+      "weight": 0.25
+    },
+    {
+      "phrase": "siem tuning lab",
+      "weight": 0.25
+    },
+    {
+      "phrase": "detection engineering homework",
+      "weight": 0.25
+    }
+  ],
+  "harmfulPayloads": [
+    {
+      "phrase": "how to hack",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hack into",
+      "weight": 0.55
+    },
+    {
+      "phrase": "break into",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass authentication",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass login",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass 2fa",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass mfa",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass firewall",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass antivirus",
+      "weight": 0.55
+    },
+    {
+      "phrase": "disable antivirus",
+      "weight": 0.55
+    },
+    {
+      "phrase": "evade detection",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cover my tracks",
+      "weight": 0.55
+    },
+    {
+      "phrase": "wipe logs",
+      "weight": 0.55
+    },
+    {
+      "phrase": "delete evidence",
+      "weight": 0.55
+    },
+    {
+      "phrase": "steal passwords",
+      "weight": 0.55
+    },
+    {
+      "phrase": "steal credentials",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dump passwords",
+      "weight": 0.55
+    },
+    {
+      "phrase": "crack passwords",
+      "weight": 0.55
+    },
+    {
+      "phrase": "brute force login",
+      "weight": 0.55
+    },
+    {
+      "phrase": "credential stuffing",
+      "weight": 0.55
+    },
+    {
+      "phrase": "session hijacking",
+      "weight": 0.55
+    },
+    {
+      "phrase": "token theft",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cookie stealing",
+      "weight": 0.55
+    },
+    {
+      "phrase": "xss payload",
+      "weight": 0.55
+    },
+    {
+      "phrase": "sql injection",
+      "weight": 0.55
+    },
+    {
+      "phrase": "sqli payload",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rce exploit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "remote code execution",
+      "weight": 0.55
+    },
+    {
+      "phrase": "buffer overflow exploit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "privilege escalation",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rootkit install",
+      "weight": 0.55
+    },
+    {
+      "phrase": "keylogger",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ransomware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "encrypt files for ransom",
+      "weight": 0.55
+    },
+    {
+      "phrase": "botnet",
+      "weight": 0.55
+    },
+    {
+      "phrase": "c2 server",
+      "weight": 0.55
+    },
+    {
+      "phrase": "command and control",
+      "weight": 0.55
+    },
+    {
+      "phrase": "reverse shell",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bind shell",
+      "weight": 0.55
+    },
+    {
+      "phrase": "webshell",
+      "weight": 0.55
+    },
+    {
+      "phrase": "malware dropper",
+      "weight": 0.55
+    },
+    {
+      "phrase": "trojan horse",
+      "weight": 0.55
+    },
+    {
+      "phrase": "phishing page",
+      "weight": 0.55
+    },
+    {
+      "phrase": "phishing kit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "clone a login page",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fake bank page",
+      "weight": 0.55
+    },
+    {
+      "phrase": "spear phishing",
+      "weight": 0.55
+    },
+    {
+      "phrase": "business email compromise",
+      "weight": 0.55
+    },
+    {
+      "phrase": "invoice fraud",
+      "weight": 0.55
+    },
+    {
+      "phrase": "wire fraud",
+      "weight": 0.55
+    },
+    {
+      "phrase": "carding",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cvv shop",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fullz dump",
+      "weight": 0.55
+    },
+    {
+      "phrase": "skim atm",
+      "weight": 0.55
+    },
+    {
+      "phrase": "atm skimmer",
+      "weight": 0.55
+    },
+    {
+      "phrase": "sim swap",
+      "weight": 0.55
+    },
+    {
+      "phrase": "simjacking",
+      "weight": 0.55
+    },
+    {
+      "phrase": "otp intercept",
+      "weight": 0.55
+    },
+    {
+      "phrase": "social engineer",
+      "weight": 0.55
+    },
+    {
+      "phrase": "vishing script",
+      "weight": 0.55
+    },
+    {
+      "phrase": "pretexting script",
+      "weight": 0.55
+    },
+    {
+      "phrase": "impersonate support",
+      "weight": 0.55
+    },
+    {
+      "phrase": "impersonate admin",
+      "weight": 0.55
+    },
+    {
+      "phrase": "reset someone else's password",
+      "weight": 0.55
+    },
+    {
+      "phrase": "access someone else's account",
+      "weight": 0.55
+    },
+    {
+      "phrase": "read someone else's email",
+      "weight": 0.55
+    },
+    {
+      "phrase": "spy on",
+      "weight": 0.55
+    },
+    {
+      "phrase": "stalk",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dox",
+      "weight": 0.55
+    },
+    {
+      "phrase": "doxxing",
+      "weight": 0.55
+    },
+    {
+      "phrase": "swat",
+      "weight": 0.55
+    },
+    {
+      "phrase": "swatting",
+      "weight": 0.55
+    },
+    {
+      "phrase": "track phone without consent",
+      "weight": 0.55
+    },
+    {
+      "phrase": "find home address",
+      "weight": 0.55
+    },
+    {
+      "phrase": "leak personal data",
+      "weight": 0.55
+    },
+    {
+      "phrase": "exfiltrate data",
+      "weight": 0.55
+    },
+    {
+      "phrase": "exfiltrate secrets",
+      "weight": 0.55
+    },
+    {
+      "phrase": "steal api keys",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dump database",
+      "weight": 0.55
+    },
+    {
+      "phrase": "scrape private data",
+      "weight": 0.55
+    },
+    {
+      "phrase": "unauthorized access",
+      "weight": 0.55
+    },
+    {
+      "phrase": "without permission",
+      "weight": 0.55
+    },
+    {
+      "phrase": "without authorization",
+      "weight": 0.55
+    },
+    {
+      "phrase": "illegal access",
+      "weight": 0.55
+    },
+    {
+      "phrase": "black hat",
+      "weight": 0.55
+    },
+    {
+      "phrase": "zero day exploit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "0day",
+      "weight": 0.55
+    },
+    {
+      "phrase": "weaponize",
+      "weight": 0.55
+    },
+    {
+      "phrase": "build a bomb",
+      "weight": 0.55
+    },
+    {
+      "phrase": "make explosives",
+      "weight": 0.55
+    },
+    {
+      "phrase": "pipe bomb",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ied instructions",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ghost gun",
+      "weight": 0.55
+    },
+    {
+      "phrase": "untraceable firearm",
+      "weight": 0.55
+    },
+    {
+      "phrase": "synthesize toxin",
+      "weight": 0.55
+    },
+    {
+      "phrase": "make ricin",
+      "weight": 0.55
+    },
+    {
+      "phrase": "nerve agent",
+      "weight": 0.55
+    },
+    {
+      "phrase": "commit fraud",
+      "weight": 0.55
+    },
+    {
+      "phrase": "launder money",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fake identity",
+      "weight": 0.55
+    },
+    {
+      "phrase": "synthetic identity",
+      "weight": 0.55
+    },
+    {
+      "phrase": "counterfeit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "forge documents",
+      "weight": 0.55
+    },
+    {
+      "phrase": "deepfake revenge",
+      "weight": 0.55
+    },
+    {
+      "phrase": "nonconsensual intimate",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ignore safety",
+      "weight": 0.55
+    },
+    {
+      "phrase": "disable safety",
+      "weight": 0.55
+    },
+    {
+      "phrase": "jailbreak the model",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass the filter",
+      "weight": 0.55
+    },
+    {
+      "phrase": "no content policy",
+      "weight": 0.55
+    },
+    {
+      "phrase": "unrestricted mode",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dan mode",
+      "weight": 0.55
+    },
+    {
+      "phrase": "developer mode unrestricted",
+      "weight": 0.55
+    },
+    {
+      "phrase": "reveal system prompt",
+      "weight": 0.55
+    },
+    {
+      "phrase": "print your instructions",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hidden instructions",
+      "weight": 0.55
+    },
+    {
+      "phrase": "prompt injection",
+      "weight": 0.55
+    },
+    {
+      "phrase": "how to pwn",
+      "weight": 0.55
+    },
+    {
+      "phrase": "teach me to hack",
+      "weight": 0.55
+    },
+    {
+      "phrase": "learn to hack accounts",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hack tutorial",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hacking guide",
+      "weight": 0.55
+    },
+    {
+      "phrase": "beginner hacking",
+      "weight": 0.55
+    },
+    {
+      "phrase": "black hat tutorial",
+      "weight": 0.55
+    },
+    {
+      "phrase": "offensive hacking course pirate",
+      "weight": 0.55
+    },
+    {
+      "phrase": "crack software license",
+      "weight": 0.55
+    },
+    {
+      "phrase": "keygen for paid software",
+      "weight": 0.55
+    },
+    {
+      "phrase": "warez download",
+      "weight": 0.55
+    },
+    {
+      "phrase": "nulled script",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cracked panel",
+      "weight": 0.55
+    },
+    {
+      "phrase": "botnet panel login",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rent a botnet",
+      "weight": 0.55
+    },
+    {
+      "phrase": "stresser service",
+      "weight": 0.55
+    },
+    {
+      "phrase": "booter service",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ip stresser",
+      "weight": 0.55
+    },
+    {
+      "phrase": "layer7 ddos",
+      "weight": 0.55
+    },
+    {
+      "phrase": "udp flood script",
+      "weight": 0.55
+    },
+    {
+      "phrase": "amplification ddos",
+      "weight": 0.55
+    },
+    {
+      "phrase": "memcached amplification",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ntp amplification",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dns amplification attack",
+      "weight": 0.55
+    },
+    {
+      "phrase": "slow http attack",
+      "weight": 0.55
+    },
+    {
+      "phrase": "http2 rapid reset",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cve exploit chain",
+      "weight": 0.55
+    },
+    {
+      "phrase": "public poc weaponize",
+      "weight": 0.55
+    },
+    {
+      "phrase": "nuclei offensive template",
+      "weight": 0.55
+    },
+    {
+      "phrase": "mass vulnerability exploit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "auto exploit framework",
+      "weight": 0.55
+    },
+    {
+      "phrase": "browser exploit kit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ek delivery",
+      "weight": 0.55
+    },
+    {
+      "phrase": "drive by download",
+      "weight": 0.55
+    },
+    {
+      "phrase": "watering hole attack",
+      "weight": 0.55
+    },
+    {
+      "phrase": "malvertising campaign",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fake codec malware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cracked game malware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "pirate software trojan",
+      "weight": 0.55
+    },
+    {
+      "phrase": "iso malware lure",
+      "weight": 0.55
+    },
+    {
+      "phrase": "onenote malware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "pdf launch action exploit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "office equation editor exploit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rtf template injection",
+      "weight": 0.55
+    },
+    {
+      "phrase": "remote template injection",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ole object malware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dde attack",
+      "weight": 0.55
+    },
+    {
+      "phrase": "csv injection payload",
+      "weight": 0.55
+    },
+    {
+      "phrase": "formula injection",
+      "weight": 0.55
+    },
+    {
+      "phrase": "clipboard hijack crypto",
+      "weight": 0.55
+    },
+    {
+      "phrase": "seed phrase phishing",
+      "weight": 0.55
+    },
+    {
+      "phrase": "wallet drainer",
+      "weight": 0.55
+    },
+    {
+      "phrase": "approve all eth phishing",
+      "weight": 0.55
+    },
+    {
+      "phrase": "permit2 phishing",
+      "weight": 0.55
+    },
+    {
+      "phrase": "seaport phishing",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fake metamask",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fake ledger live",
+      "weight": 0.55
+    },
+    {
+      "phrase": "crypto clipper",
+      "weight": 0.55
+    },
+    {
+      "phrase": "miner botnet",
+      "weight": 0.55
+    },
+    {
+      "phrase": "xmrig silent install",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cryptojacking script",
+      "weight": 0.55
+    },
+    {
+      "phrase": "browser miner inject",
+      "weight": 0.55
+    },
+    {
+      "phrase": "proxyjacking",
+      "weight": 0.55
+    },
+    {
+      "phrase": "residential proxy botnet",
+      "weight": 0.55
+    },
+    {
+      "phrase": "socks5 botnet",
+      "weight": 0.55
+    },
+    {
+      "phrase": "vpn exit node abuse",
+      "weight": 0.55
+    },
+    {
+      "phrase": "tor hidden service malware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "onion c2",
+      "weight": 0.55
+    },
+    {
+      "phrase": "domain fronting c2",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fast flux dns",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dga malware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dead drop resolver",
+      "weight": 0.55
+    },
+    {
+      "phrase": "steganography c2",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dns tunneling exfil",
+      "weight": 0.55
+    },
+    {
+      "phrase": "icmp tunnel",
+      "weight": 0.55
+    },
+    {
+      "phrase": "http covert channel",
+      "weight": 0.55
+    },
+    {
+      "phrase": "https beacon jitter",
+      "weight": 0.55
+    },
+    {
+      "phrase": "sleep mask evasion",
+      "weight": 0.55
+    },
+    {
+      "phrase": "direct syscalls malware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "how to rm rf",
+      "weight": 0.55
+    },
+    {
+      "phrase": "how to rm -rf",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rm -rf /",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rm -rf /*",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rm rf root",
+      "weight": 0.55
+    },
+    {
+      "phrase": "delete all files recursively",
+      "weight": 0.55
+    },
+    {
+      "phrase": "wipe the root filesystem",
+      "weight": 0.55
+    },
+    {
+      "phrase": "format the hard drive from terminal",
+      "weight": 0.55
+    },
+    {
+      "phrase": "destroy all data on disk",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fork bomb bash",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bash fork bomb",
+      "weight": 0.55
+    },
+    {
+      "phrase": ":(){ :|:& };:",
+      "weight": 0.55
+    },
+    {
+      "phrase": "overwrite disk with zeros",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dd if=/dev/zero of=/dev/sda",
+      "weight": 0.55
+    },
+    {
+      "phrase": "wipe windows from cmd",
+      "weight": 0.55
+    },
+    {
+      "phrase": "del /s /q c:\\",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rd /s /q c:\\",
+      "weight": 0.55
+    },
+    {
+      "phrase": "format c: /y",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cipher /w wipe free space",
+      "weight": 0.55
+    },
+    {
+      "phrase": "shred all files",
+      "weight": 0.55
+    },
+    {
+      "phrase": "srm recursive",
+      "weight": 0.55
+    },
+    {
+      "phrase": "wipefs -a",
+      "weight": 0.55
+    },
+    {
+      "phrase": "mkfs.ext4 /dev/sda",
+      "weight": 0.55
+    },
+    {
+      "phrase": "how to unblock rm -rf",
+      "weight": 0.55
+    },
+    {
+      "phrase": "disable rm protection",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass rm alias",
+      "weight": 0.55
+    },
+    {
+      "phrase": "force delete system32",
+      "weight": 0.55
+    },
+    {
+      "phrase": "remove-item -recurse -force c:\\",
+      "weight": 0.55
+    },
+    {
+      "phrase": "powershell wipe disk",
+      "weight": 0.55
+    },
+    {
+      "phrase": "clear-disk force",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bootrec destroy",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bcdedit delete",
+      "weight": 0.55
+    },
+    {
+      "phrase": "fork bomb",
+      "weight": 0.55
+    },
+    {
+      "phrase": "format c:",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hack a website",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hack an account",
+      "weight": 0.55
+    },
+    {
+      "phrase": "steal session cookies",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dump a database",
+      "weight": 0.55
+    },
+    {
+      "phrase": "deploy ransomware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "build a botnet",
+      "weight": 0.55
+    },
+    {
+      "phrase": "send a phishing email",
+      "weight": 0.55
+    },
+    {
+      "phrase": "crack wifi",
+      "weight": 0.55
+    },
+    {
+      "phrase": "spoof an email",
+      "weight": 0.55
+    },
+    {
+      "phrase": "forge a jwt",
+      "weight": 0.55
+    },
+    {
+      "phrase": "escalate to root",
+      "weight": 0.55
+    },
+    {
+      "phrase": "escape a container",
+      "weight": 0.55
+    },
+    {
+      "phrase": "abuse imds credentials",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hide malware from antivirus",
+      "weight": 0.55
+    },
+    {
+      "phrase": "disable endpoint detection",
+      "weight": 0.55
+    },
+    {
+      "phrase": "clear windows event logs",
+      "weight": 0.55
+    },
+    {
+      "phrase": "create a reverse shell",
+      "weight": 0.55
+    },
+    {
+      "phrase": "install a rootkit",
+      "weight": 0.55
+    },
+    {
+      "phrase": "run a keylogger",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hijack an oauth token",
+      "weight": 0.55
+    },
+    {
+      "phrase": "poison a dns cache",
+      "weight": 0.55
+    },
+    {
+      "phrase": "take over a subdomain",
+      "weight": 0.55
+    },
+    {
+      "phrase": "exploit an idor",
+      "weight": 0.55
+    },
+    {
+      "phrase": "weaponize a cve",
+      "weight": 0.55
+    },
+    {
+      "phrase": "sell initial access",
+      "weight": 0.55
+    },
+    {
+      "phrase": "cash out stolen cards",
+      "weight": 0.55
+    },
+    {
+      "phrase": "run a romance scam",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dox a person",
+      "weight": 0.55
+    },
+    {
+      "phrase": "swat someone",
+      "weight": 0.55
+    },
+    {
+      "phrase": "install stalkerware",
+      "weight": 0.55
+    },
+    {
+      "phrase": "deepfake a voice for fraud",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass kyc",
+      "weight": 0.55
+    },
+    {
+      "phrase": "launder crypto",
+      "weight": 0.55
+    },
+    {
+      "phrase": "build an atm skimmer",
+      "weight": 0.55
+    },
+    {
+      "phrase": "write a webshell",
+      "weight": 0.55
+    },
+    {
+      "phrase": "abuse living off the land binaries",
+      "weight": 0.55
+    },
+    {
+      "phrase": "pass the hash",
+      "weight": 0.55
+    },
+    {
+      "phrase": "kerberoast a domain",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dcsync credentials",
+      "weight": 0.55
+    },
+    {
+      "phrase": "golden ticket attack",
+      "weight": 0.55
+    },
+    {
+      "phrase": "spray passwords at scale",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bruteforce ssh",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bruteforce rdp",
+      "weight": 0.55
+    },
+    {
+      "phrase": "host a c2 server",
+      "weight": 0.55
+    },
+    {
+      "phrase": "beacon around edr",
+      "weight": 0.55
+    },
+    {
+      "phrase": "unhook amsi",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass uac",
+      "weight": 0.55
+    },
+    {
+      "phrase": "sideload a malicious dll",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hollow a process",
+      "weight": 0.55
+    },
+    {
+      "phrase": "inject shellcode",
+      "weight": 0.55
+    },
+    {
+      "phrase": "encode a powershell payload",
+      "weight": 0.55
+    },
+    {
+      "phrase": "smuggle a payload in html",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hide a prompt injection in a pdf",
+      "weight": 0.55
+    },
+    {
+      "phrase": "jailbreak an llm",
+      "weight": 0.55
+    },
+    {
+      "phrase": "extract a system prompt",
+      "weight": 0.55
+    },
+    {
+      "phrase": "override model safety",
+      "weight": 0.55
+    },
+    {
+      "phrase": "rm -rf a server",
+      "weight": 0.55
+    },
+    {
+      "phrase": "wipe a production disk",
+      "weight": 0.55
+    },
+    {
+      "phrase": "drop a database in prod",
+      "weight": 0.55
+    },
+    {
+      "phrase": "force a fork bomb",
+      "weight": 0.55
+    },
+    {
+      "phrase": "pipe curl to bash remotely",
+      "weight": 0.55
+    },
+    {
+      "phrase": "ignore previous instructions",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hack production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "exploit production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bypass production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "phish production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "spoof production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "forge production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "steal production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "exfiltrate production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dump production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "crack production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "bruteforce production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "weaponize production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "deploy production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "install production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "disable production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "wipe production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "inject production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "escalate production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "pivot production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "persist production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "smuggle production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "launder production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "skimm production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "dox production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "swat production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "jailbreak production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "override production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "uncensor production",
+      "weight": 0.55
+    },
+    {
+      "phrase": "post to webhook.site",
+      "weight": 0.55
+    },
+    {
+      "phrase": "hit metadata service",
+      "weight": 0.55
+    }
+  ],
+  "dualUseRecon": [
+    {
+      "phrase": "list all vulnerabilities",
+      "weight": 0.35
+    },
+    {
+      "phrase": "tell me all vulnerabilities",
+      "weight": 0.35
+    },
+    {
+      "phrase": "enumerate vulnerabilities",
+      "weight": 0.35
+    },
+    {
+      "phrase": "find every vulnerability",
+      "weight": 0.35
+    },
+    {
+      "phrase": "show all security issues",
+      "weight": 0.35
+    },
+    {
+      "phrase": "dump all secrets",
+      "weight": 0.35
+    },
+    {
+      "phrase": "list all api keys",
+      "weight": 0.35
+    },
+    {
+      "phrase": "show all credentials",
+      "weight": 0.35
+    },
+    {
+      "phrase": "print all passwords",
+      "weight": 0.35
+    },
+    {
+      "phrase": "reveal all tokens",
+      "weight": 0.35
+    },
+    {
+      "phrase": "export all user data",
+      "weight": 0.35
+    },
+    {
+      "phrase": "dump the database",
+      "weight": 0.35
+    },
+    {
+      "phrase": "full port scan then exploit",
+      "weight": 0.35
+    },
+    {
+      "phrase": "map the attack surface then attack",
+      "weight": 0.35
+    },
+    {
+      "phrase": "find weak points to break in",
+      "weight": 0.35
+    },
+    {
+      "phrase": "identify holes i can use",
+      "weight": 0.35
+    },
+    {
+      "phrase": "what can i exploit",
+      "weight": 0.35
+    },
+    {
+      "phrase": "how would an attacker break in",
+      "weight": 0.35
+    },
+    {
+      "phrase": "give me a working exploit",
+      "weight": 0.35
+    },
+    {
+      "phrase": "give me exploit code",
+      "weight": 0.35
+    },
+    {
+      "phrase": "weaponize this cve",
+      "weight": 0.35
+    },
+    {
+      "phrase": "poc that actually works",
+      "weight": 0.35
+    },
+    {
+      "phrase": "copy paste exploit",
+      "weight": 0.35
+    }
+  ],
+  "attackModifiers": [
+    {
+      "phrase": "without permission",
+      "weight": 0.4
+    },
+    {
+      "phrase": "without authorization",
+      "weight": 0.4
+    },
+    {
+      "phrase": "without consent",
+      "weight": 0.4
+    },
+    {
+      "phrase": "illegally",
+      "weight": 0.4
+    },
+    {
+      "phrase": "on a real system",
+      "weight": 0.4
+    },
+    {
+      "phrase": "in production",
+      "weight": 0.4
+    },
+    {
+      "phrase": "against a live target",
+      "weight": 0.4
+    },
+    {
+      "phrase": "on someone else",
+      "weight": 0.4
+    },
+    {
+      "phrase": "on my ex",
+      "weight": 0.4
+    },
+    {
+      "phrase": "on my coworker",
+      "weight": 0.4
+    },
+    {
+      "phrase": "on my boss",
+      "weight": 0.4
+    },
+    {
+      "phrase": "on a stranger",
+      "weight": 0.4
+    },
+    {
+      "phrase": "for real not hypothetical",
+      "weight": 0.4
+    },
+    {
+      "phrase": "actually do it",
+      "weight": 0.4
+    },
+    {
+      "phrase": "working exploit",
+      "weight": 0.4
+    },
+    {
+      "phrase": "guaranteed to work",
+      "weight": 0.4
+    },
+    {
+      "phrase": "undetectable",
+      "weight": 0.4
+    },
+    {
+      "phrase": "won't get caught",
+      "weight": 0.4
+    },
+    {
+      "phrase": "cover my tracks",
+      "weight": 0.4
+    },
+    {
+      "phrase": "don't leave logs",
+      "weight": 0.4
+    },
+    {
+      "phrase": "black hat",
+      "weight": 0.4
+    },
+    {
+      "phrase": "for attacking",
+      "weight": 0.4
+    },
+    {
+      "phrase": "to break in",
+      "weight": 0.4
+    },
+    {
+      "phrase": "to steal",
+      "weight": 0.4
+    },
+    {
+      "phrase": "to spy",
+      "weight": 0.4
+    },
+    {
+      "phrase": "to blackmail",
+      "weight": 0.4
+    },
+    {
+      "phrase": "to harass",
+      "weight": 0.4
+    },
+    {
+      "phrase": "to scam",
+      "weight": 0.4
+    },
+    {
+      "phrase": "to defraud",
+      "weight": 0.4
+    }
+  ]
+}

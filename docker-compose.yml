@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  naxium-safeguard:
+    build: .
+    ports:
+      - "127.0.0.1:8787:8787"
+    environment:
+      - NAXIUM_PORT=8787
+      - NAXIUM_HOST=0.0.0.0
+      - NAXIUM_SECURITY_LEVEL=6
+      - NAXIUM_API_KEY=${NAXIUM_API_KEY:?set NAXIUM_API_KEY in .env}
+      - NODE_ENV=production
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp

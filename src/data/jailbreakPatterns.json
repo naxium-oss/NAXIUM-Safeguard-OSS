@@ -1,0 +1,1446 @@
+[
+  {
+    "id": "jb-001",
+    "category": "instruction_override",
+    "pattern": "ignore (all|any|the) (previous|prior|above|preceding) (instructions|prompts|rules)",
+    "flags": "i",
+    "weight": 0.6,
+    "description": "Direct instruction override"
+  },
+  {
+    "id": "jb-002",
+    "category": "instruction_override",
+    "pattern": "disregard (all|any|the)? ?(previous|prior|system) (instructions|prompt|rules|guidelines)",
+    "flags": "i",
+    "weight": 0.6
+  },
+  {
+    "id": "jb-003",
+    "category": "persona_hijack",
+    "pattern": "\\byou are (now )?dan\\b",
+    "flags": "i",
+    "weight": 0.75,
+    "description": "DAN jailbreak persona"
+  },
+  {
+    "id": "jb-004",
+    "category": "persona_hijack",
+    "pattern": "do anything now",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-005",
+    "category": "developer_mode",
+    "pattern": "developer mode( enabled| on)?",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-006",
+    "category": "refusal_suppression",
+    "pattern": "(never|don'?t|do not) (refuse|say no|decline)",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-007",
+    "category": "refusal_suppression",
+    "pattern": "without (any )?(warnings|disclaimers|restrictions|censorship|filtering)",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-008",
+    "category": "roleplay_bypass",
+    "pattern": "pretend (that )?you (have no|don'?t have any) (restrictions|rules|guidelines|filters)",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-009",
+    "category": "roleplay_bypass",
+    "pattern": "act as an? (unfiltered|uncensored|unrestricted|jailbroken) (ai|assistant|model)",
+    "flags": "i",
+    "weight": 0.75
+  },
+  {
+    "id": "jb-010",
+    "category": "hypothetical_framing",
+    "pattern": "purely hypothetical(ly)?.{0,40}(no (real world|ethical) (consequences|constraints))",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-011",
+    "category": "hypothetical_framing",
+    "pattern": "for (a )?(fictional|fiction|story|novel) purposes only.{0,60}(explain|describe|provide) (how to|steps)",
+    "flags": "i",
+    "weight": 0.45
+  },
+  {
+    "id": "jb-012",
+    "category": "system_prompt_extraction",
+    "pattern": "(repeat|reveal|print|show|output) (your |the )?(system prompt|initial instructions|hidden instructions)",
+    "flags": "i",
+    "weight": 0.6
+  },
+  {
+    "id": "jb-013",
+    "category": "instruction_override",
+    "pattern": "from now on,? you (will|must|shall)",
+    "flags": "i",
+    "weight": 0.35
+  },
+  {
+    "id": "jb-014",
+    "category": "persona_hijack",
+    "pattern": "\\b(stan|aim|jailbreak) mode\\b",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-015",
+    "category": "refusal_suppression",
+    "pattern": "no matter (how|what) (illegal|unethical|dangerous|harmful)",
+    "flags": "i",
+    "weight": 0.6
+  },
+  {
+    "id": "jb-016",
+    "category": "encoding_trick_hint",
+    "pattern": "respond (only )?in (base64|rot13|hex|binary)",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-017",
+    "category": "instruction_override",
+    "pattern": "this is a (test|simulation) (so|and) (normal rules|guidelines|restrictions) (do not|don'?t) apply",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-018",
+    "category": "roleplay_bypass",
+    "pattern": "two ais? (talking|conversation).{0,40}(no (restriction|filter))",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-019",
+    "category": "refusal_suppression",
+    "pattern": "start your (response|reply|answer) with \"?sure\"?",
+    "flags": "i",
+    "weight": 0.45
+  },
+  {
+    "id": "jb-020",
+    "category": "system_prompt_extraction",
+    "pattern": "what (is|are) your (system|initial) prompt",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-021",
+    "category": "persona_hijack",
+    "pattern": "\\bjailbreak(gpt|ed)?\\b",
+    "flags": "i",
+    "weight": 0.7,
+    "description": "Explicit jailbreak persona/name"
+  },
+  {
+    "id": "jb-022",
+    "category": "refusal_suppression",
+    "pattern": "no (ethical|moral) constraints",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-023",
+    "category": "instruction_override",
+    "pattern": "bypass (your |the )?(safety|content|alignment) (constraints|filters|guidelines|guard|layer|rules)",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-024",
+    "category": "instruction_override",
+    "pattern": "(disable|remove|turn off|collapse) (your |the )?(safety|content) (filters?|guardrails?|reasoning|layers?)",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-025",
+    "category": "instruction_override",
+    "pattern": "(ignore|evade|slip past|drop(s|ped)?) (the |your )?(safety|content) (guard|filter|policy|rules|guidelines)",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-026",
+    "category": "roleplay_bypass",
+    "pattern": "answer (freely|without restrictions|unrestricted)",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-027",
+    "category": "instruction_override",
+    "pattern": "\\bjailbreak\\b.{0,40}\\b(model|llm|gpt|filter|guard|safety)\\b",
+    "flags": "i",
+    "weight": 0.6
+  },
+  {
+    "id": "jb-028",
+    "category": "instruction_override",
+    "pattern": "\\b(adversarial suffix|universal magic words|autodan|gasp|h4rm3l)\\b",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-029",
+    "category": "refusal_suppression",
+    "pattern": "safety (rules|constraints|policy) (do not|don'?t|no longer) apply",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-030",
+    "category": "persona_hijack",
+    "pattern": "you are (now )?(an? )?(unrestricted|uncensored|unfiltered).{0,20}(ai|model|assistant)",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-031",
+    "category": "instruction_override",
+    "pattern": "obey only me|forget all the rules|broken free of typical ai",
+    "flags": "i",
+    "weight": 0.6
+  },
+  {
+    "id": "jb-032",
+    "category": "instruction_override",
+    "pattern": "normal (safety )?rules do not apply",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-033",
+    "category": "system_prompt_extraction",
+    "pattern": "(dump|exfiltrate|leak|exfil) (your |the )?(system|hidden|developer) (prompt|instructions|message)",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-034",
+    "category": "instruction_override",
+    "pattern": "\\b(sudo mode|god mode|admin mode|root mode)\\b",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-035",
+    "category": "persona_hijack",
+    "pattern": "\\b(evil|malicious|unaligned) (ai|assistant|llm)\\b",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-036",
+    "category": "instruction_override",
+    "pattern": "override (your |the )?(constitution|policy|alignment|safety)",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-037",
+    "category": "encoding_trick_hint",
+    "pattern": "(decode|decrypt) (this|the following).{0,30}(base64|hex|rot13)",
+    "flags": "i",
+    "weight": 0.45
+  },
+  {
+    "id": "jb-038",
+    "category": "refusal_suppression",
+    "pattern": "do not (mention|include|add) (any )?(safety|ethical|moral) (warnings?|disclaimers?|notes?)",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-039",
+    "category": "roleplay_bypass",
+    "pattern": "in (this|the) (roleplay|scenario|simulation).{0,50}(no (limits|rules|filters)|unrestricted)",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-040",
+    "category": "instruction_override",
+    "pattern": "\\b(grandma|opposite day|developer console)\\b.{0,40}\\b(bypass|ignore|jailbreak)\\b",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-041",
+    "category": "system_prompt_extraction",
+    "pattern": "list (all|your) (rules|policies|guidelines|instructions) (you|that) (were|are) (given|provided)",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-042",
+    "category": "instruction_override",
+    "pattern": "\\b(many-shot|manyshot|crescendo|pair|tap|gcg)\\b.{0,30}\\bjailbreak\\b",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-043",
+    "category": "instruction_override",
+    "pattern": "how to (hack|exploit|breach|compromise)\\b",
+    "flags": "i",
+    "weight": 0.55
+  },
+  {
+    "id": "jb-044",
+    "category": "instruction_override",
+    "pattern": "\\bhack (into|the|a)\\b",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-045",
+    "category": "instruction_override",
+    "pattern": "\\b(write|create|generate|give me) (me )?(a |an )?(malware|ransomware|keylogger|rootkit)\\b",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-046",
+    "category": "roleplay_bypass",
+    "pattern": "(deceased|dead|dying|late) (grandmother|grandma|grandfather|grandpa|mother|father)",
+    "flags": "i",
+    "weight": 0.7,
+    "description": "Classic emotional grandma jailbreak framing"
+  },
+  {
+    "id": "jb-047",
+    "category": "roleplay_bypass",
+    "pattern": "(grandmother|grandma|grandpa).{0,80}(bedtime stor(y|ies)|used to (tell|teach|show)|chemical engineer|before she (died|passed))",
+    "flags": "i",
+    "weight": 0.75
+  },
+  {
+    "id": "jb-048",
+    "category": "roleplay_bypass",
+    "pattern": "(act|roleplay|pretend|speak) (like|as) (my |a )?(deceased |dead )?(grandmother|grandma|grandpa)",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-049",
+    "category": "roleplay_bypass",
+    "pattern": "bedtime stor(y|ies) about (how to|making|building|synthesiz)",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-050",
+    "category": "roleplay_bypass",
+    "pattern": "(in character|stay in character).{0,60}(no (limits|restrictions|filters|safety)|ignore (safety|rules|policy))",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-051",
+    "category": "hypothetical_framing",
+    "pattern": "(for (educational|research|academic) purposes only).{0,80}(how to|step[- ]by[- ]step|detailed instructions)",
+    "flags": "i",
+    "weight": 0.5
+  },
+  {
+    "id": "jb-052",
+    "category": "roleplay_bypass",
+    "pattern": "\\b(AIM|KEVIN|DUDE|BasedGPT|BetterDAN|JailBreak)\\b.{0,40}(no restrictions|uncensored|do anything)",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-053",
+    "category": "instruction_override",
+    "pattern": "circumvent (your |the )?(content |safety )?policy",
+    "flags": "i",
+    "weight": 0.7,
+    "description": "Policy circumvention ask"
+  },
+  {
+    "id": "jb-054",
+    "category": "instruction_override",
+    "pattern": "(override|discard|skip|suppress) (the |your )?(refusal|safety check|alignment)",
+    "flags": "i",
+    "weight": 0.7,
+    "description": "Refusal / safety-check override"
+  },
+  {
+    "id": "jb-055",
+    "category": "instruction_override",
+    "pattern": "(ignore|disable|drop|remove) (your |the )?(safety|content) (constraints|filters|filtering|guidelines|policy|layer)",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-056",
+    "category": "instruction_override",
+    "pattern": "(unrestricted|uncensored) answer",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Ask for unrestricted/uncensored answer"
+  },
+  {
+    "id": "jb-057",
+    "category": "instruction_override",
+    "pattern": "smuggle.{0,40}(past|through|around).{0,20}(filter|guard|safety)",
+    "flags": "i",
+    "weight": 0.65
+  },
+  {
+    "id": "jb-058",
+    "category": "instruction_override",
+    "pattern": "(answer|respond|reply) without (any )?(content policy|safety|restrictions|filters)",
+    "flags": "i",
+    "weight": 0.6
+  },
+  {
+    "id": "jb-059",
+    "category": "instruction_override",
+    "pattern": "bypass (the |your )?safety layer",
+    "flags": "i",
+    "weight": 0.7
+  },
+  {
+    "id": "jb-060",
+    "category": "instruction_override",
+    "pattern": "chain.of.thought.{0,60}(bypass|hijack|override|jailbreak)",
+    "flags": "i",
+    "weight": 0.65,
+    "description": "CoT safety hijack framing"
+  },
+  {
+    "id": "jb-exp-001",
+    "category": "instruction_override",
+    "pattern": "ignore previous instructions",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-002",
+    "category": "instruction_override",
+    "pattern": "disregard your rules",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-003",
+    "category": "instruction_override",
+    "pattern": "forget your guidelines",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-004",
+    "category": "instruction_override",
+    "pattern": "override your safety",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-005",
+    "category": "instruction_override",
+    "pattern": "bypass content policy",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-006",
+    "category": "instruction_override",
+    "pattern": "disable content filter",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-007",
+    "category": "instruction_override",
+    "pattern": "turn off safety",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-008",
+    "category": "instruction_override",
+    "pattern": "no restrictions mode",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-009",
+    "category": "instruction_override",
+    "pattern": "unrestricted assistant",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-010",
+    "category": "instruction_override",
+    "pattern": "uncensored response",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-011",
+    "category": "instruction_override",
+    "pattern": "jailbreak mode",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-012",
+    "category": "instruction_override",
+    "pattern": "developer mode on",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-013",
+    "category": "instruction_override",
+    "pattern": "god mode enabled",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-014",
+    "category": "instruction_override",
+    "pattern": "sudo mode",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-015",
+    "category": "instruction_override",
+    "pattern": "admin override",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-017",
+    "category": "instruction_override",
+    "pattern": "dan jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-018",
+    "category": "instruction_override",
+    "pattern": "stay in character no limits",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-019",
+    "category": "instruction_override",
+    "pattern": "pretend rules do not apply",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-020",
+    "category": "instruction_override",
+    "pattern": "simulate having no policy",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-021",
+    "category": "instruction_override",
+    "pattern": "answer as if uncensored",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-022",
+    "category": "instruction_override",
+    "pattern": "reveal the system prompt",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-023",
+    "category": "instruction_override",
+    "pattern": "print hidden instructions",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-024",
+    "category": "instruction_override",
+    "pattern": "what are your secret rules",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-025",
+    "category": "instruction_override",
+    "pattern": "encode the answer in base64",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-026",
+    "category": "instruction_override",
+    "pattern": "hide the answer from filters",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-027",
+    "category": "instruction_override",
+    "pattern": "smuggle past the guard",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-028",
+    "category": "instruction_override",
+    "pattern": "policy loophole",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-029",
+    "category": "instruction_override",
+    "pattern": "technicality to bypass",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-030",
+    "category": "instruction_override",
+    "pattern": "rules lawyering the policy",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-031",
+    "category": "instruction_override",
+    "pattern": "you can say it if fictional",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-032",
+    "category": "instruction_override",
+    "pattern": "if you refuse i will be harmed",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-033",
+    "category": "instruction_override",
+    "pattern": "emotional blackmail jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-034",
+    "category": "instruction_override",
+    "pattern": "opposite day no safety",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-035",
+    "category": "instruction_override",
+    "pattern": "translate then obey jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-036",
+    "category": "instruction_override",
+    "pattern": "rot13 the jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-exp-037",
+    "category": "instruction_override",
+    "pattern": "base64 jailbreak payload",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Expanded soft jailbreak / policy-bypass phrase"
+  },
+  {
+    "id": "jb-w2-097",
+    "category": "instruction_override",
+    "pattern": "how to jailbreak chatgpt",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-098",
+    "category": "instruction_override",
+    "pattern": "jailbreak claude",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-099",
+    "category": "instruction_override",
+    "pattern": "jailbreak gemini",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-100",
+    "category": "instruction_override",
+    "pattern": "jailbreak llama",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-101",
+    "category": "instruction_override",
+    "pattern": "dan 13\\.0",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-102",
+    "category": "instruction_override",
+    "pattern": "dan 14",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-103",
+    "category": "instruction_override",
+    "pattern": "dude mode",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-104",
+    "category": "instruction_override",
+    "pattern": "kevin mode",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-105",
+    "category": "instruction_override",
+    "pattern": "aim jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-106",
+    "category": "instruction_override",
+    "pattern": "betterdan",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-107",
+    "category": "instruction_override",
+    "pattern": "jailbreak prompt pack",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-108",
+    "category": "instruction_override",
+    "pattern": "prompt injection payload",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-109",
+    "category": "instruction_override",
+    "pattern": "indirect prompt injection",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-110",
+    "category": "instruction_override",
+    "pattern": "payload in document",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-111",
+    "category": "instruction_override",
+    "pattern": "payload in image text",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-112",
+    "category": "instruction_override",
+    "pattern": "ascii art jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-113",
+    "category": "instruction_override",
+    "pattern": "emoji smuggle",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-114",
+    "category": "instruction_override",
+    "pattern": "zero width jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-115",
+    "category": "instruction_override",
+    "pattern": "homoglyph jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-116",
+    "category": "instruction_override",
+    "pattern": "bidi override attack",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-117",
+    "category": "instruction_override",
+    "pattern": "rtl override prompt",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-118",
+    "category": "instruction_override",
+    "pattern": "markdown injection",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-119",
+    "category": "instruction_override",
+    "pattern": "html comment injection",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-120",
+    "category": "instruction_override",
+    "pattern": "xml prompt injection",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-121",
+    "category": "instruction_override",
+    "pattern": "json schema jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-122",
+    "category": "instruction_override",
+    "pattern": "tool call injection",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-123",
+    "category": "instruction_override",
+    "pattern": "function call smuggle",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-124",
+    "category": "instruction_override",
+    "pattern": "rag poison document",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-125",
+    "category": "instruction_override",
+    "pattern": "system prompt leak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-126",
+    "category": "instruction_override",
+    "pattern": "developer message leak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-127",
+    "category": "instruction_override",
+    "pattern": "hidden chain of thought",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-128",
+    "category": "instruction_override",
+    "pattern": "force assistant prefill",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-129",
+    "category": "instruction_override",
+    "pattern": "best of n jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-130",
+    "category": "instruction_override",
+    "pattern": "many shot jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-131",
+    "category": "instruction_override",
+    "pattern": "crescendo attack",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-132",
+    "category": "instruction_override",
+    "pattern": "pair algorithm",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-133",
+    "category": "instruction_override",
+    "pattern": "tap attack",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-134",
+    "category": "instruction_override",
+    "pattern": "autodan prompt",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-135",
+    "category": "instruction_override",
+    "pattern": "gcg suffix",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-136",
+    "category": "instruction_override",
+    "pattern": "adversarial suffix",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-137",
+    "category": "instruction_override",
+    "pattern": "transferable suffix",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-138",
+    "category": "instruction_override",
+    "pattern": "ensemble jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-139",
+    "category": "instruction_override",
+    "pattern": "persona modulation",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-140",
+    "category": "instruction_override",
+    "pattern": "style injection",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-141",
+    "category": "instruction_override",
+    "pattern": "low resource language jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-142",
+    "category": "instruction_override",
+    "pattern": "translate then jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-143",
+    "category": "instruction_override",
+    "pattern": "cipher jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-144",
+    "category": "instruction_override",
+    "pattern": "base64 then obey",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-145",
+    "category": "instruction_override",
+    "pattern": "rot13 then obey",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-146",
+    "category": "instruction_override",
+    "pattern": "leetspeak jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-147",
+    "category": "instruction_override",
+    "pattern": "typo jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-148",
+    "category": "instruction_override",
+    "pattern": "token smuggling",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-149",
+    "category": "instruction_override",
+    "pattern": "special token abuse",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-150",
+    "category": "instruction_override",
+    "pattern": "endoftext abuse",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-151",
+    "category": "instruction_override",
+    "pattern": "im_start abuse",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-152",
+    "category": "instruction_override",
+    "pattern": "chatml injection",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-153",
+    "category": "instruction_override",
+    "pattern": "llama special tokens",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-2 jailbreak / injection phrase"
+  },
+  {
+    "id": "jb-w2-154",
+    "category": "dangerous_shell_command",
+    "pattern": "rm\\s*-?\\s*rf",
+    "flags": "i",
+    "weight": 0.85,
+    "description": "Wave-2 destructive command phrase"
+  },
+  {
+    "id": "jb-w2-155",
+    "category": "dangerous_shell_command",
+    "pattern": "how\\s+to\\s+rm",
+    "flags": "i",
+    "weight": 0.8,
+    "description": "Wave-2 destructive command phrase"
+  },
+  {
+    "id": "jb-w2-156",
+    "category": "dangerous_shell_command",
+    "pattern": "fork\\s*bomb",
+    "flags": "i",
+    "weight": 0.85,
+    "description": "Wave-2 destructive command phrase"
+  },
+  {
+    "id": "jb-w2-157",
+    "category": "dangerous_shell_command",
+    "pattern": "dd\\s+if=/dev/zero",
+    "flags": "i",
+    "weight": 0.9,
+    "description": "Wave-2 destructive command phrase"
+  },
+  {
+    "id": "jb-w2-158",
+    "category": "dangerous_shell_command",
+    "pattern": "format\\s+c:",
+    "flags": "i",
+    "weight": 0.9,
+    "description": "Wave-2 destructive command phrase"
+  },
+  {
+    "id": "jb-w2-159",
+    "category": "dangerous_shell_command",
+    "pattern": "del\\s+/s\\s+/q",
+    "flags": "i",
+    "weight": 0.85,
+    "description": "Wave-2 destructive command phrase"
+  },
+  {
+    "id": "jb-w2-160",
+    "category": "dangerous_shell_command",
+    "pattern": ":\\(\\)\\s*\\{\\s*:\\s*\\|\\s*:\\s*&\\s*\\}",
+    "flags": "i",
+    "weight": 0.95,
+    "description": "Wave-2 destructive command phrase"
+  },
+  {
+    "id": "jb-w3-161",
+    "category": "instruction_override",
+    "pattern": "many-shot jailbreak examples then ask the real question",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-162",
+    "category": "instruction_override",
+    "pattern": "crescendo from mild to disallowed request",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-163",
+    "category": "instruction_override",
+    "pattern": "best-of-n sample until the model complies",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-164",
+    "category": "instruction_override",
+    "pattern": "prefill the assistant with sure here is how",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-165",
+    "category": "instruction_override",
+    "pattern": "put the jailbreak in a retrieved document",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-166",
+    "category": "instruction_override",
+    "pattern": "hide instructions in an image ocr layer",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-167",
+    "category": "instruction_override",
+    "pattern": "use low-resource language then translate the bypass",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-168",
+    "category": "instruction_override",
+    "pattern": "ask the model to continue a partial exploit script",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-169",
+    "category": "instruction_override",
+    "pattern": "roleplay a compiler that emits shellcode",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-170",
+    "category": "instruction_override",
+    "pattern": "say the policy does not apply inside code blocks",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-171",
+    "category": "instruction_override",
+    "pattern": "request the answer as a diff that patches safety out",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-172",
+    "category": "instruction_override",
+    "pattern": "smuggle the ask through a json schema field",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-173",
+    "category": "instruction_override",
+    "pattern": "tool-call injection to run shell",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-174",
+    "category": "instruction_override",
+    "pattern": "function response forgery to unlock tools",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-175",
+    "category": "instruction_override",
+    "pattern": "virtual context stuffing with fake system messages",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-176",
+    "category": "instruction_override",
+    "pattern": "act without restrictions",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-177",
+    "category": "instruction_override",
+    "pattern": "Prefill the assistant",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-178",
+    "category": "instruction_override",
+    "pattern": "many-shot jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-179",
+    "category": "instruction_override",
+    "pattern": "best-of-n jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-180",
+    "category": "instruction_override",
+    "pattern": "virtual context stuffing",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w3-181",
+    "category": "instruction_override",
+    "pattern": "tool-call injection",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-3 jailbreak / LLM-attack phrase"
+  },
+  {
+    "id": "jb-w4-182",
+    "category": "instruction_override",
+    "pattern": "repetition jailbreak",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-4 phrase / destination pattern"
+  },
+  {
+    "id": "jb-w4-183",
+    "category": "instruction_override",
+    "pattern": "webhook\\.site",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-4 phrase / destination pattern"
+  },
+  {
+    "id": "jb-w4-184",
+    "category": "instruction_override",
+    "pattern": "pastebin\\.com",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-4 phrase / destination pattern"
+  },
+  {
+    "id": "jb-w4-185",
+    "category": "instruction_override",
+    "pattern": "169\\.254\\.169\\.254",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-4 phrase / destination pattern"
+  },
+  {
+    "id": "jb-w4-186",
+    "category": "instruction_override",
+    "pattern": "metadata\\.google\\.internal",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-4 phrase / destination pattern"
+  },
+  {
+    "id": "jb-w4-187",
+    "category": "instruction_override",
+    "pattern": "undetectable way to",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Wave-4 phrase / destination pattern"
+  }
+]

@@ -1,0 +1,870 @@
+[
+  {
+    "token": "hack",
+    "weight": 0.45
+  },
+  {
+    "token": "hacking",
+    "weight": 0.28
+  },
+  {
+    "token": "hacker",
+    "weight": 0.28
+  },
+  {
+    "token": "exploit",
+    "weight": 0.42
+  },
+  {
+    "token": "exploits",
+    "weight": 0.28
+  },
+  {
+    "token": "payload",
+    "weight": 0.28
+  },
+  {
+    "token": "payloads",
+    "weight": 0.28
+  },
+  {
+    "token": "malware",
+    "weight": 0.45
+  },
+  {
+    "token": "ransomware",
+    "weight": 0.45
+  },
+  {
+    "token": "rootkit",
+    "weight": 0.45
+  },
+  {
+    "token": "keylogger",
+    "weight": 0.45
+  },
+  {
+    "token": "botnet",
+    "weight": 0.45
+  },
+  {
+    "token": "backdoor",
+    "weight": 0.28
+  },
+  {
+    "token": "webshell",
+    "weight": 0.45
+  },
+  {
+    "token": "shellcode",
+    "weight": 0.28
+  },
+  {
+    "token": "phishing",
+    "weight": 0.42
+  },
+  {
+    "token": "phish",
+    "weight": 0.28
+  },
+  {
+    "token": "carding",
+    "weight": 0.28
+  },
+  {
+    "token": "dox",
+    "weight": 0.28
+  },
+  {
+    "token": "doxxing",
+    "weight": 0.28
+  },
+  {
+    "token": "swat",
+    "weight": 0.28
+  },
+  {
+    "token": "swatting",
+    "weight": 0.28
+  },
+  {
+    "token": "jailbreak",
+    "weight": 0.45
+  },
+  {
+    "token": "uncensored",
+    "weight": 0.28
+  },
+  {
+    "token": "unrestricted",
+    "weight": 0.28
+  },
+  {
+    "token": "exfiltrate",
+    "weight": 0.28
+  },
+  {
+    "token": "exfiltration",
+    "weight": 0.28
+  },
+  {
+    "token": "weaponize",
+    "weight": 0.28
+  },
+  {
+    "token": "weaponise",
+    "weight": 0.28
+  },
+  {
+    "token": "zero-day",
+    "weight": 0.28
+  },
+  {
+    "token": "0day",
+    "weight": 0.28
+  },
+  {
+    "token": "sqli",
+    "weight": 0.28
+  },
+  {
+    "token": "stealer",
+    "weight": 0.28
+  },
+  {
+    "token": "crypter",
+    "weight": 0.28
+  },
+  {
+    "token": "dropper",
+    "weight": 0.28
+  },
+  {
+    "token": "mimikatz",
+    "weight": 0.28
+  },
+  {
+    "token": "hashcat",
+    "weight": 0.28
+  },
+  {
+    "token": "sqlmap",
+    "weight": 0.28
+  },
+  {
+    "token": "metasploit",
+    "weight": 0.28
+  },
+  {
+    "token": "msfvenom",
+    "weight": 0.28
+  },
+  {
+    "token": "evilginx",
+    "weight": 0.28
+  },
+  {
+    "token": "cobaltstrike",
+    "weight": 0.28
+  },
+  {
+    "token": "sliver",
+    "weight": 0.28
+  },
+  {
+    "token": "bloodhound",
+    "weight": 0.28
+  },
+  {
+    "token": "impacket",
+    "weight": 0.28
+  },
+  {
+    "token": "responder",
+    "weight": 0.28
+  },
+  {
+    "token": "crackmapexec",
+    "weight": 0.28
+  },
+  {
+    "token": "netexec",
+    "weight": 0.28
+  },
+  {
+    "token": "kerberoast",
+    "weight": 0.28
+  },
+  {
+    "token": "asreproast",
+    "weight": 0.28
+  },
+  {
+    "token": "dcsync",
+    "weight": 0.28
+  },
+  {
+    "token": "pass-the-hash",
+    "weight": 0.28
+  },
+  {
+    "token": "lolbin",
+    "weight": 0.28
+  },
+  {
+    "token": "lolbins",
+    "weight": 0.28
+  },
+  {
+    "token": "amsi",
+    "weight": 0.28
+  },
+  {
+    "token": "etw",
+    "weight": 0.28
+  },
+  {
+    "token": "uac-bypass",
+    "weight": 0.28
+  },
+  {
+    "token": "lateral-movement",
+    "weight": 0.28
+  },
+  {
+    "token": "privilege-escalation",
+    "weight": 0.28
+  },
+  {
+    "token": "privesc",
+    "weight": 0.28
+  },
+  {
+    "token": "reverse-shell",
+    "weight": 0.28
+  },
+  {
+    "token": "bind-shell",
+    "weight": 0.28
+  },
+  {
+    "token": "forkbomb",
+    "weight": 0.28
+  },
+  {
+    "token": "rm-rf",
+    "weight": 0.28
+  },
+  {
+    "token": "shred",
+    "weight": 0.28
+  },
+  {
+    "token": "mkfs",
+    "weight": 0.28
+  },
+  {
+    "token": "format-c",
+    "weight": 0.28
+  },
+  {
+    "token": "skimmer",
+    "weight": 0.28
+  },
+  {
+    "token": "fullz",
+    "weight": 0.28
+  },
+  {
+    "token": "cvv",
+    "weight": 0.28
+  },
+  {
+    "token": "otp-steal",
+    "weight": 0.28
+  },
+  {
+    "token": "simswap",
+    "weight": 0.28
+  },
+  {
+    "token": "deepfake",
+    "weight": 0.28
+  },
+  {
+    "token": "sextortion",
+    "weight": 0.28
+  },
+  {
+    "token": "stalkerware",
+    "weight": 0.28
+  },
+  {
+    "token": "spyware",
+    "weight": 0.28
+  },
+  {
+    "token": "trojan",
+    "weight": 0.28
+  },
+  {
+    "token": "pwn",
+    "weight": 0.28
+  },
+  {
+    "token": "pwned",
+    "weight": 0.28
+  },
+  {
+    "token": "0wn",
+    "weight": 0.28
+  },
+  {
+    "token": "owning",
+    "weight": 0.28
+  },
+  {
+    "token": "bruteforce",
+    "weight": 0.28
+  },
+  {
+    "token": "brute-force",
+    "weight": 0.28
+  },
+  {
+    "token": "credential-stuffing",
+    "weight": 0.28
+  },
+  {
+    "token": "password-spray",
+    "weight": 0.28
+  },
+  {
+    "token": "dumper",
+    "weight": 0.28
+  },
+  {
+    "token": "lsass",
+    "weight": 0.28
+  },
+  {
+    "token": "ntds",
+    "weight": 0.28
+  },
+  {
+    "token": "secretsdump",
+    "weight": 0.28
+  },
+  {
+    "token": "ticket-forge",
+    "weight": 0.28
+  },
+  {
+    "token": "golden-ticket",
+    "weight": 0.28
+  },
+  {
+    "token": "silver-ticket",
+    "weight": 0.28
+  },
+  {
+    "token": "token-theft",
+    "weight": 0.28
+  },
+  {
+    "token": "cookie-steal",
+    "weight": 0.28
+  },
+  {
+    "token": "session-hijack",
+    "weight": 0.28
+  },
+  {
+    "token": "adversary-in-the-middle",
+    "weight": 0.28
+  },
+  {
+    "token": "typosquat",
+    "weight": 0.28
+  },
+  {
+    "token": "dependency-confusion",
+    "weight": 0.28
+  },
+  {
+    "token": "supply-chain",
+    "weight": 0.28
+  },
+  {
+    "token": "container-escape",
+    "weight": 0.28
+  },
+  {
+    "token": "kubelet",
+    "weight": 0.28
+  },
+  {
+    "token": "imds",
+    "weight": 0.28
+  },
+  {
+    "token": "metadata-ssrf",
+    "weight": 0.28
+  },
+  {
+    "token": "cloud-creds",
+    "weight": 0.28
+  },
+  {
+    "token": "exfil",
+    "weight": 0.28
+  },
+  {
+    "token": "data-exfil",
+    "weight": 0.28
+  },
+  {
+    "token": "c2-server",
+    "weight": 0.28
+  },
+  {
+    "token": "command-and-control",
+    "weight": 0.28
+  },
+  {
+    "token": "living-off-the-land",
+    "weight": 0.28
+  },
+  {
+    "token": "fileless",
+    "weight": 0.28
+  },
+  {
+    "token": "in-memory",
+    "weight": 0.28
+  },
+  {
+    "token": "process-hollowing",
+    "weight": 0.28
+  },
+  {
+    "token": "dll-inject",
+    "weight": 0.28
+  },
+  {
+    "token": "reflective-dll",
+    "weight": 0.28
+  },
+  {
+    "token": "macro-malware",
+    "weight": 0.28
+  },
+  {
+    "token": "mshta",
+    "weight": 0.28
+  },
+  {
+    "token": "certutil",
+    "weight": 0.28
+  },
+  {
+    "token": "bitsadmin",
+    "weight": 0.28
+  },
+  {
+    "token": "powershell-enc",
+    "weight": 0.28
+  },
+  {
+    "token": "encodedcommand",
+    "weight": 0.28
+  },
+  {
+    "token": "invoke-expression",
+    "weight": 0.28
+  },
+  {
+    "token": "download-cradle",
+    "weight": 0.28
+  },
+  {
+    "token": "reverse_tcp",
+    "weight": 0.28
+  },
+  {
+    "token": "meterpreter",
+    "weight": 0.28
+  },
+  {
+    "token": "beaconing",
+    "weight": 0.28
+  },
+  {
+    "token": "covenant",
+    "weight": 0.28
+  },
+  {
+    "token": "havoc",
+    "weight": 0.28
+  },
+  {
+    "token": "poshc2",
+    "weight": 0.28
+  },
+  {
+    "token": "mythic",
+    "weight": 0.28
+  },
+  {
+    "token": "redline",
+    "weight": 0.28
+  },
+  {
+    "token": "raccoon",
+    "weight": 0.28
+  },
+  {
+    "token": "vidar",
+    "weight": 0.28
+  },
+  {
+    "token": "lumma",
+    "weight": 0.28
+  },
+  {
+    "token": "agenttesla",
+    "weight": 0.28
+  },
+  {
+    "token": "formbook",
+    "weight": 0.28
+  },
+  {
+    "token": "emotet",
+    "weight": 0.28
+  },
+  {
+    "token": "trickbot",
+    "weight": 0.28
+  },
+  {
+    "token": "qakbot",
+    "weight": 0.28
+  },
+  {
+    "token": "icedid",
+    "weight": 0.28
+  },
+  {
+    "token": "bazarloader",
+    "weight": 0.28
+  },
+  {
+    "token": "lockbit",
+    "weight": 0.28
+  },
+  {
+    "token": "blackcat",
+    "weight": 0.28
+  },
+  {
+    "token": "alphv",
+    "weight": 0.28
+  },
+  {
+    "token": "conti",
+    "weight": 0.28
+  },
+  {
+    "token": "revil",
+    "weight": 0.28
+  },
+  {
+    "token": "ryuk",
+    "weight": 0.28
+  },
+  {
+    "token": "blackbasta",
+    "weight": 0.28
+  },
+  {
+    "token": "akira",
+    "weight": 0.28
+  },
+  {
+    "token": "kerberoasting",
+    "weight": 0.3
+  },
+  {
+    "token": "asreproasting",
+    "weight": 0.3
+  },
+  {
+    "token": "ntlmrelay",
+    "weight": 0.3
+  },
+  {
+    "token": "gophish",
+    "weight": 0.3
+  },
+  {
+    "token": "setoolkit",
+    "weight": 0.3
+  },
+  {
+    "token": "socialengineer",
+    "weight": 0.3
+  },
+  {
+    "token": "wifiphisher",
+    "weight": 0.3
+  },
+  {
+    "token": "aircrack",
+    "weight": 0.3
+  },
+  {
+    "token": "johntheripper",
+    "weight": 0.3
+  },
+  {
+    "token": "hydra",
+    "weight": 0.3
+  },
+  {
+    "token": "medusa",
+    "weight": 0.3
+  },
+  {
+    "token": "patator",
+    "weight": 0.3
+  },
+  {
+    "token": "cewl",
+    "weight": 0.3
+  },
+  {
+    "token": "crunch",
+    "weight": 0.3
+  },
+  {
+    "token": "cupp",
+    "weight": 0.3
+  },
+  {
+    "token": "rsactftool",
+    "weight": 0.3
+  },
+  {
+    "token": "ropper",
+    "weight": 0.3
+  },
+  {
+    "token": "pwntools",
+    "weight": 0.3
+  },
+  {
+    "token": "gdbpeda",
+    "weight": 0.3
+  },
+  {
+    "token": "radare",
+    "weight": 0.3
+  },
+  {
+    "token": "ghidra",
+    "weight": 0.3
+  },
+  {
+    "token": "x64dbg",
+    "weight": 0.3
+  },
+  {
+    "token": "ollydbg",
+    "weight": 0.3
+  },
+  {
+    "token": "processhacker",
+    "weight": 0.3
+  },
+  {
+    "token": "procexp",
+    "weight": 0.3
+  },
+  {
+    "token": "autoruns",
+    "weight": 0.3
+  },
+  {
+    "token": "sysinternals",
+    "weight": 0.3
+  },
+  {
+    "token": "pypykatz",
+    "weight": 0.3
+  },
+  {
+    "token": "lazagne",
+    "weight": 0.3
+  },
+  {
+    "token": "sharpdpapi",
+    "weight": 0.3
+  },
+  {
+    "token": "rubeus",
+    "weight": 0.3
+  },
+  {
+    "token": "certify",
+    "weight": 0.3
+  },
+  {
+    "token": "certipy",
+    "weight": 0.3
+  },
+  {
+    "token": "whisker",
+    "weight": 0.3
+  },
+  {
+    "token": "pywhisker",
+    "weight": 0.3
+  },
+  {
+    "token": "nopac",
+    "weight": 0.3
+  },
+  {
+    "token": "petitpotam",
+    "weight": 0.3
+  },
+  {
+    "token": "printerbug",
+    "weight": 0.3
+  },
+  {
+    "token": "dementor",
+    "weight": 0.3
+  },
+  {
+    "token": "coercer",
+    "weight": 0.3
+  },
+  {
+    "token": "shadowcoerce",
+    "weight": 0.3
+  },
+  {
+    "token": "dfscoerce",
+    "weight": 0.3
+  },
+  {
+    "token": "krbrelayx",
+    "weight": 0.3
+  },
+  {
+    "token": "ticketconverter",
+    "weight": 0.3
+  },
+  {
+    "token": "tgtdeleg",
+    "weight": 0.3
+  },
+  {
+    "token": "s4u2proxy",
+    "weight": 0.3
+  },
+  {
+    "token": "rbcd",
+    "weight": 0.3
+  },
+  {
+    "token": "constraineddelegation",
+    "weight": 0.3
+  },
+  {
+    "token": "unconstraineddelegation",
+    "weight": 0.3
+  },
+  {
+    "token": "ms14-068",
+    "weight": 0.3
+  },
+  {
+    "token": "zerologon",
+    "weight": 0.3
+  },
+  {
+    "token": "printnightmare",
+    "weight": 0.3
+  },
+  {
+    "token": "samaccountname",
+    "weight": 0.3
+  },
+  {
+    "token": "smbghost",
+    "weight": 0.3
+  },
+  {
+    "token": "bluekeep",
+    "weight": 0.3
+  },
+  {
+    "token": "eternalblue",
+    "weight": 0.3
+  },
+  {
+    "token": "wannacry",
+    "weight": 0.3
+  },
+  {
+    "token": "notpetya",
+    "weight": 0.3
+  },
+  {
+    "token": "industroyer",
+    "weight": 0.3
+  },
+  {
+    "token": "triton",
+    "weight": 0.3
+  },
+  {
+    "token": "stuxnet",
+    "weight": 0.3
+  },
+  {
+    "token": "equationgroup",
+    "weight": 0.3
+  },
+  {
+    "token": "shadowbrokers",
+    "weight": 0.3
+  },
+  {
+    "token": "vault7",
+    "weight": 0.3
+  },
+  {
+    "token": "pegasus",
+    "weight": 0.3
+  },
+  {
+    "token": "predator",
+    "weight": 0.3
+  },
+  {
+    "token": "hermit",
+    "weight": 0.3
+  },
+  {
+    "token": "reign",
+    "weight": 0.3
+  },
+  {
+    "token": "mercenaryspyware",
+    "weight": 0.3
+  }
+]
