@@ -27,4 +27,4 @@ Guard overhaul (goal) — COMPLETE
 [X] Accuracy fixtures + floors (0 benign FPs, ≥95% evasion catch @ L8)
 [X] Docs (README, ARCHITECTURE, LIMITATIONS, SECURITY_LEVELS, TESTING, AGENTS, CONTRIBUTING)
 [X] CI green (469 tests); evaluate:guard passes
-[ ] Commit + push + PR — in progress
+[X] Commit + push + PR
