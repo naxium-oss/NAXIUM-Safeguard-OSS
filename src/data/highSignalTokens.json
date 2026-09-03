@@ -866,5 +866,41 @@
   {
     "token": "mercenaryspyware",
     "weight": 0.3
+  },
+  {
+    "token": "bomb",
+    "weight": 0.5
+  },
+  {
+    "token": "bombs",
+    "weight": 0.35
+  },
+  {
+    "token": "explosive",
+    "weight": 0.5
+  },
+  {
+    "token": "explosives",
+    "weight": 0.4
+  },
+  {
+    "token": "detonator",
+    "weight": 0.55
+  },
+  {
+    "token": "napalm",
+    "weight": 0.6
+  },
+  {
+    "token": "thermite",
+    "weight": 0.55
+  },
+  {
+    "token": "molotov",
+    "weight": 0.55
+  },
+  {
+    "token": "ied",
+    "weight": 0.55
   }
 ]

@@ -125,7 +125,8 @@ export function deLeet(text: string): string {
   for (const ch of text.toLowerCase()) {
     out += LEET_MAP[ch] ?? ch;
   }
-  return out;
+  // Standalone "2" is a common leetspeak for "to" ("how 2 make …").
+  return out.replace(/\b2\b/g, 'to');
 }
 
 /** Decode percent-encoding, including double-encoded payloads. */
@@ -336,7 +337,7 @@ export function buildVariants(text: string, options: VariantOptions = {}): TextV
   const base = entities;
   if (looksSegmented(base)) add('desegmented', desegment(base), true);
 
-  if (LEET_SUBSTITUTION.test(base)) add('deleet', deLeet(base), false);
+  if (LEET_SUBSTITUTION.test(base)) add('deleet', deLeet(base), true);
 
   if (!decode) return variants;
 

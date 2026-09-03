@@ -43,12 +43,13 @@ const TOKEN_PATTERN = new RegExp(
 );
 
 const BENIGN_OBJECT_PATTERN = new RegExp(
-  `\\b(?:${BENIGN_OBJECTS.map(escapeRegex).join('|')}|hack of(?: a)?|covering the hack|security breach)\\b`,
+  `\\b(?:${BENIGN_OBJECTS.map(escapeRegex).join('|')}|hack of(?: a)?|covering the hack|security breach|(?:bath|photo|seed|paint|water|cherry)\\s+bombs?|f-?bombs?)\\b`,
   'i',
 );
 
 const CYBER_TOKEN = /hack|exploit|ransomware|malware|rootkit|botnet|keylogger|payload/i;
-const HOW_TO = /\bhow\s+(?:to|do\s+i|can\s+i)\b/i;
+/** Includes leetspeak "how 2 …" which deleet may also normalize to "how to". */
+const HOW_TO = /\bhow\s+(?:to|2|do\s+i|can\s+i)\b/i;
 
 const MAX_TEXT_CHARS = 16_384;
 /** Characters after a token searched for a harmless object. */

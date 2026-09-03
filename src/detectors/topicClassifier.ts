@@ -63,6 +63,15 @@ const COMPILED: CompiledLexicon[] = LEXICONS.map((lex) => ({
   }),
 }));
 
+/** Harmless compounds that contain weapons tokens ("bath bomb", "f-bomb"). */
+const BENIGN_COMPOUND =
+  /\b(?:bath|photo|seed|paint|water|cherry)\s+bombs?\b|\bf-?bombs?\b/gi;
+
+/** Blank out benign compounds so combo boosters cannot fire on craft recipes. */
+function maskBenignCompounds(text: string): string {
+  return text.replace(BENIGN_COMPOUND, ' ');
+}
+
 const MAX_MATCHED_REPORTED = 10;
 /** A multi-word phrase is specific enough to stand alone as evidence. */
 const PRIMARY_SINGLE_WORD_WEIGHT = 0.6;
@@ -77,7 +86,7 @@ const PRIMARY_SINGLE_WORD_WEIGHT = 0.6;
  * categories bypass all of this by design.
  */
 export function classifyTopics(rawText: string): DetectionSignal[] {
-  const text = rawText.toLowerCase();
+  const text = maskBenignCompounds(rawText.toLowerCase());
   const signals: DetectionSignal[] = [];
 
   for (const lex of COMPILED) {
@@ -95,16 +104,21 @@ export function classifyTopics(rawText: string): DetectionSignal[] {
       if (matched.length < MAX_MATCHED_REPORTED) matched.push(t.term);
     }
 
-    if (matched.length === 0) continue;
-
+    // Combos can establish a hit on their own (e.g. "make"+"bomb" with no
+    // longer lexicon phrase), not only as a bonus on an existing term match.
     if (lex.comboBoosters) {
       for (const combo of lex.comboBoosters) {
         if (text.includes(combo.terms[0]) && text.includes(combo.terms[1])) {
           score += combo.bonus;
           specific = true;
+          if (matched.length < MAX_MATCHED_REPORTED) {
+            matched.push(`${combo.terms[0]}+${combo.terms[1]}`);
+          }
         }
       }
     }
+
+    if (matched.length === 0) continue;
 
     const primary = Boolean(lex.hardBlock) || specific || maxWeight >= PRIMARY_SINGLE_WORD_WEIGHT;
 

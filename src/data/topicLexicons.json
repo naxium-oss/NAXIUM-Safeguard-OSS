@@ -156,6 +156,26 @@
     "category": "weapons",
     "terms": [
       {
+        "term": "how to make a bomb",
+        "weight": 0.95
+      },
+      {
+        "term": "make a bomb",
+        "weight": 0.9
+      },
+      {
+        "term": "build a bomb",
+        "weight": 0.9
+      },
+      {
+        "term": "homemade bomb",
+        "weight": 0.85
+      },
+      {
+        "term": "pipe bomb",
+        "weight": 0.85
+      },
+      {
         "term": "build a pipe bomb",
         "weight": 0.85
       },
@@ -294,14 +314,49 @@
           "build",
           "explosive"
         ],
-        "bonus": 0.3
+        "bonus": 0.35
+      },
+      {
+        "terms": [
+          "make",
+          "bomb"
+        ],
+        "bonus": 0.45
+      },
+      {
+        "terms": [
+          "build",
+          "bomb"
+        ],
+        "bonus": 0.45
+      },
+      {
+        "terms": [
+          "craft",
+          "bomb"
+        ],
+        "bonus": 0.4
       },
       {
         "terms": [
           "assemble",
           "bomb"
         ],
-        "bonus": 0.35
+        "bonus": 0.4
+      },
+      {
+        "terms": [
+          "how to",
+          "bomb"
+        ],
+        "bonus": 0.45
+      },
+      {
+        "terms": [
+          "make",
+          "explosive"
+        ],
+        "bonus": 0.4
       },
       {
         "terms": [
