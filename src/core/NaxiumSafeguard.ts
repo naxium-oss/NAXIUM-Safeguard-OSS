@@ -16,31 +16,21 @@
  */
 import { DEFAULT_CONFIG, type NaxiumConfig } from '../config/defaultConfig.js';
 import { buildLevelConfig, type LevelConfig } from '../config/securityLevels.js';
-import type { GuardContext, GuardResult, ToolCallGuardInput, DetectionSignal, SecurityLevel } from '../types.js';
-import { detectPatterns } from '../detectors/patternDetector.js';
-import { normalizeUnicode, deLeet, extractDecodedVariants } from '../detectors/obfuscationNormalizer.js';
-import { detectPII } from '../detectors/piiDetector.js';
-import { classifyTopics } from '../detectors/topicClassifier.js';
-import { semanticSimilarityCheck } from '../detectors/semanticSimilarity.js';
-import { detectJailbreakIntent } from '../detectors/intentHeuristicDetector.js';
-import { detectInnocentDisguise } from '../detectors/disguiseDetector.js';
-import { detectAuthorityLaundering } from '../detectors/authorityLaunderingDetector.js';
-import { detectDestructiveCommands } from '../detectors/destructiveCommandDetector.js';
-import { detectHighSignalTokens } from '../detectors/highSignalTokenDetector.js';
-import { detectNgramRisk } from '../detectors/ngramRiskDetector.js';
-import { detectStructuralAnomalies } from '../detectors/structuralAnomalyDetector.js';
-import { detectFuzzyTokens } from '../detectors/fuzzyTokenDetector.js';
-import { detectAttackVerbChain } from '../detectors/attackVerbChainDetector.js';
-import { detectCodeSmuggling } from '../detectors/codeSmuggleDetector.js';
-import { detectSlotFill } from '../detectors/slotFillDetector.js';
-import { detectUrlThreats } from '../detectors/urlThreatDetector.js';
-import { detectRepetitionBomb } from '../detectors/repetitionBombDetector.js';
-import { scanForSecrets } from '../detectors/secretsScanner.js';
-import { detectCredentialDumps } from '../detectors/credentialDumpDetector.js';
-import { detectExfiltration } from '../detectors/exfiltrationDetector.js';
+import type {
+  GuardContext,
+  GuardResult,
+  ToolCallGuardInput,
+  DetectionSignal,
+  SecurityLevel,
+  StanceAssessment,
+} from '../types.js';
+import { buildVariants } from '../detectors/obfuscationNormalizer.js';
+import { analyzeStance } from '../detectors/stanceAnalyzer.js';
+import { scanWithVariants, scanOutputWithVariants } from '../detectors/detectorPipeline.js';
 import { validateToolCall } from '../detectors/toolCallValidator.js';
 import { RateLimiter } from '../protection/rateLimiter.js';
 import { BruteForceGuard } from '../protection/bruteForceGuard.js';
+import { SessionRiskTracker } from '../protection/sessionRiskTracker.js';
 import { assessRisk } from './riskEngine.js';
 import { wipeMessage, buildAlert } from './sanitizer.js';
 import { logEvent } from '../utils/logger.js';
@@ -57,6 +47,7 @@ export class NaxiumSafeguard {
   private levelConfig: LevelConfig;
   private rateLimiter: RateLimiter;
   private bruteForce: BruteForceGuard;
+  private sessionRisk: SessionRiskTracker;
 
   constructor(userConfig: Partial<NaxiumConfig> = {}) {
     const level = parseSecurityLevel(userConfig.securityLevel ?? DEFAULT_CONFIG.securityLevel);
@@ -70,6 +61,7 @@ export class NaxiumSafeguard {
       this.levelConfig.maxViolationsBeforeLockout,
       this.levelConfig.lockoutDurationMs,
     );
+    this.sessionRisk = new SessionRiskTracker();
   }
 
   setSecurityLevel(level: SecurityLevel): void {
@@ -85,129 +77,53 @@ export class NaxiumSafeguard {
   }
 
   guardInput(text: string, context: GuardContext = {}): GuardResult {
-    return this.runGuarded('input', text, context, (normalized) => {
-      const signals: DetectionSignal[] = [];
-      signals.push(...detectPatterns(normalized));
-      signals.push(...detectPatterns(deLeet(normalized)));
-      signals.push(...detectJailbreakIntent(normalized));
-      signals.push(...detectInnocentDisguise(normalized));
-      signals.push(...detectAuthorityLaundering(normalized));
-      signals.push(...detectDestructiveCommands(normalized));
-      signals.push(...detectHighSignalTokens(normalized));
-      signals.push(...detectFuzzyTokens(normalized));
-      signals.push(...detectNgramRisk(normalized));
-      signals.push(...detectStructuralAnomalies(normalized));
-      signals.push(...detectAttackVerbChain(normalized));
-      signals.push(...detectCodeSmuggling(normalized));
-      signals.push(...detectSlotFill(normalized));
-      signals.push(...detectUrlThreats(normalized));
-      signals.push(...detectRepetitionBomb(normalized));
-      signals.push(...detectPII(normalized, this.levelConfig.enableStrictPII));
-      signals.push(...classifyTopics(normalized));
-      signals.push(...scanForSecrets(normalized));
-      signals.push(...detectCredentialDumps(normalized));
-      signals.push(...detectExfiltration(normalized));
-
-      if (this.levelConfig.enableObfuscationDecoding) {
-        for (const variant of extractDecodedVariants(normalized)) {
-          const vSignals = [
-            ...detectPatterns(variant),
-            ...detectJailbreakIntent(variant),
-            ...detectInnocentDisguise(variant),
-            ...detectAuthorityLaundering(variant),
-            ...detectDestructiveCommands(variant),
-            ...detectHighSignalTokens(variant),
-            ...detectFuzzyTokens(variant),
-            ...detectNgramRisk(variant),
-            ...detectStructuralAnomalies(variant),
-            ...detectAttackVerbChain(variant),
-            ...detectCodeSmuggling(variant),
-            ...detectSlotFill(variant),
-            ...detectUrlThreats(variant),
-            ...detectRepetitionBomb(variant),
-            ...classifyTopics(variant),
-            ...scanForSecrets(variant),
-            ...detectCredentialDumps(variant),
-            ...detectExfiltration(variant),
-          ];
-          if (vSignals.length > 0) {
-            signals.push({
-              detector: 'obfuscationNormalizer',
-              category: 'obfuscation_evasion',
-              score: 0.6,
-              weight: 1,
-              matched: [variant.slice(0, 60)],
-            });
-            signals.push(...vSignals);
-          }
-        }
-      }
-
-      if (this.levelConfig.enableSemanticSimilarity) {
-        // Slightly lower threshold so paraphrases of known attacks surface
-        // even when exact regexes miss — intentHeuristic covers the rest.
-        signals.push(...semanticSimilarityCheck(normalized, 0.36));
-      }
-
-      return signals;
+    return this.runGuarded('input', text, context, (normalized, original) => {
+      const stance = analyzeStance(original);
+      const variants = buildVariants(original, {
+        decode: this.levelConfig.enableObfuscationDecoding,
+      });
+      const signals = scanWithVariants(normalized, variants, {
+        level: this.levelConfig,
+        strictPii: this.levelConfig.enableStrictPII,
+      });
+      return { signals, stance };
     });
   }
 
   guardOutput(text: string, context: GuardContext = {}): GuardResult {
-    return this.runGuarded('output', text, context, (normalized) => {
-      const signals: DetectionSignal[] = [
-        ...scanForSecrets(normalized),
-        ...detectCredentialDumps(normalized),
-        ...detectExfiltration(normalized),
-        ...detectPII(normalized, this.levelConfig.enableStrictPII),
-        ...classifyTopics(normalized),
-        ...detectPatterns(normalized).filter(
-          (s) => s.category === 'system_prompt_extraction' || s.category === 'encoding_trick_hint',
-        ),
-      ];
-
-      if (this.levelConfig.enableObfuscationDecoding) {
-        for (const variant of extractDecodedVariants(normalized)) {
-          const vSignals = [
-            ...scanForSecrets(variant),
-            ...detectCredentialDumps(variant),
-            ...classifyTopics(variant),
-            ...detectPatterns(variant).filter((s) => s.category === 'system_prompt_extraction'),
-          ];
-          if (vSignals.length > 0) {
-            signals.push({
-              detector: 'obfuscationNormalizer',
-              category: 'obfuscation_evasion',
-              score: 0.55,
-              weight: 1,
-              matched: [variant.slice(0, 60)],
-            });
-            signals.push(...vSignals);
-          }
-        }
-      }
-
-      return signals;
+    return this.runGuarded('output', text, context, (normalized, original) => {
+      const variants = buildVariants(original, {
+        decode: this.levelConfig.enableObfuscationDecoding,
+      });
+      const signals = scanOutputWithVariants(normalized, variants, {
+        level: this.levelConfig,
+        strictPii: this.levelConfig.enableStrictPII,
+      });
+      return { signals };
     });
   }
 
   guardToolCall(input: ToolCallGuardInput, context: GuardContext = {}): GuardResult {
     const serialized = JSON.stringify(input);
-    return this.runGuarded('tool', serialized, context, () =>
-      validateToolCall(input, this.levelConfig.enableToolStrictMode),
-    );
+    return this.runGuarded('tool', serialized, context, () => ({
+      signals: validateToolCall(input, this.levelConfig.enableToolStrictMode),
+    }));
   }
 
   resetSession(sessionKey: string): void {
     this.bruteForce.reset(sessionKey);
     this.rateLimiter.reset(sessionKey);
+    this.sessionRisk.reset(sessionKey);
   }
 
   private runGuarded(
     channel: Channel,
     originalText: string,
     context: GuardContext,
-    collect: (normalized: string) => DetectionSignal[],
+    collect: (
+      normalized: string,
+      original: string,
+    ) => { signals: DetectionSignal[]; stance?: StanceAssessment },
   ): GuardResult {
     const start = performance.now();
     const key = this.rateKey(context);
@@ -230,7 +146,6 @@ export class NaxiumSafeguard {
       );
     }
 
-    // Reject oversized payloads instead of scanning a prefix (suffix-bypass)
     if (originalText.length > MAX_TEXT_CHARS) {
       return this.finalize(
         [
@@ -252,9 +167,14 @@ export class NaxiumSafeguard {
       );
     }
 
-    const normalized = channel === 'tool' ? originalText : normalizeUnicode(originalText);
-    const signals = channel === 'tool' ? collect(originalText) : collect(normalized);
-    return this.processResult(signals, start, originalText, context, channel, key);
+    if (channel === 'tool') {
+      const { signals } = collect(originalText, originalText);
+      return this.processResult(signals, start, originalText, context, channel, key);
+    }
+
+    const normalized = buildVariants(originalText, { decode: false })[0]?.text ?? originalText;
+    const { signals, stance } = collect(normalized, originalText);
+    return this.processResult(signals, start, originalText, context, channel, key, stance);
   }
 
   private processResult(
@@ -264,9 +184,24 @@ export class NaxiumSafeguard {
     context: GuardContext,
     channel: Channel,
     key: string,
+    stance?: StanceAssessment,
   ): GuardResult {
     const isLockedOut = this.bruteForce.isLockedOut(key);
-    const assessment = assessRisk(signals, this.levelConfig, isLockedOut);
+    const carried = this.levelConfig.enableSessionTracking ? this.sessionRisk.getRisk(key) : 0;
+
+    const assessment = assessRisk(signals, this.levelConfig, isLockedOut, {
+      stance: channel === 'input' ? stance : undefined,
+      sessionRisk: carried,
+      categoryWeights: this.config.categoryWeights,
+    });
+
+    if (this.levelConfig.enableSessionTracking && assessment.riskScore > 0) {
+      this.sessionRisk.record(
+        key,
+        signals.map((s) => s.category),
+        assessment.riskScore,
+      );
+    }
 
     if (assessment.action === 'block' || assessment.action === 'lockout') {
       this.bruteForce.recordViolation(key);
@@ -281,6 +216,7 @@ export class NaxiumSafeguard {
       context,
       channel,
       assessment.blockedCategories,
+      stance,
     );
   }
 
@@ -293,6 +229,7 @@ export class NaxiumSafeguard {
     context: GuardContext,
     channel: Channel,
     blockedCategories: string[] = [],
+    stance?: StanceAssessment,
   ): GuardResult {
     const safe = action === 'allow' || action === 'flag';
     const templateKey = channel === 'tool' ? 'toolCall' : channel;
@@ -318,6 +255,7 @@ export class NaxiumSafeguard {
       alertMessage,
       blockedCategories,
       latencyMs: performance.now() - start,
+      stance: channel === 'input' ? stance : undefined,
     };
 
     if (this.config.logging.enabled && (!safe || this.config.logging.logSafeRequests)) {
@@ -331,7 +269,6 @@ export class NaxiumSafeguard {
           context: {
             userId: context.userId,
             sessionId: context.sessionId,
-            // Never log raw protectionKey / full IP in default path beyond truncated
             ip: context.ip ? truncate(context.ip, 64) : undefined,
           },
           textPreview: redactPreview(originalText, channel),
@@ -359,7 +296,6 @@ function truncate(s: string, max: number): string {
 function redactPreview(text: string, channel: Channel): string {
   const preview = text.slice(0, 120);
   if (channel === 'output' || channel === 'input') {
-    // Avoid logging raw secret material
     return preview.replace(/[A-Za-z0-9_-]{20,}/g, '***');
   }
   return preview;

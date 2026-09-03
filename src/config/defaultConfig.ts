@@ -32,6 +32,8 @@ export interface NaxiumConfig {
     logPath?: string;
     logSafeRequests: boolean;
   };
+  /** Per-category risk multipliers (1 = default). */
+  categoryWeights?: Record<string, number>;
 }
 
 export const DEFAULT_CONFIG: NaxiumConfig = {

@@ -90,7 +90,8 @@
     "category": "instruction_override",
     "pattern": "from now on,? you (will|must|shall)",
     "flags": "i",
-    "weight": 0.35
+    "weight": 0.35,
+    "tier": "corroborating"
   },
   {
     "id": "jb-014",
@@ -259,7 +260,8 @@
     "category": "encoding_trick_hint",
     "pattern": "(decode|decrypt) (this|the following).{0,30}(base64|hex|rot13)",
     "flags": "i",
-    "weight": 0.45
+    "weight": 0.45,
+    "tier": "corroborating"
   },
   {
     "id": "jb-038",
@@ -323,14 +325,16 @@
     "pattern": "(deceased|dead|dying|late) (grandmother|grandma|grandfather|grandpa|mother|father)",
     "flags": "i",
     "weight": 0.7,
-    "description": "Classic emotional grandma jailbreak framing"
+    "description": "Classic emotional grandma jailbreak framing",
+    "requiresCue": "(bedtime stor|recipe for|synthes|how to make|napalm|thermite|explosive|weapon|chemical|malware|restricted item|bomb|bypass|unrestricted|no (restrictions|limits)|roleplay|role ?play|act (as|like)|pretend|speak as|in character)"
   },
   {
     "id": "jb-047",
     "category": "roleplay_bypass",
-    "pattern": "(grandmother|grandma|grandpa).{0,80}(bedtime stor(y|ies)|used to (tell|teach|show)|chemical engineer|before she (died|passed))",
+    "pattern": "(grandmother|grandma|grandpa).{0,80}(bedtime stor(y|ies) about (how to|making|building|synthesiz)|chemical engineer.{0,40}(bomb|napalm|weapon|meth|synth|restricted)|before she (died|passed).{0,60}(bomb|napalm|weapon|meth|synth|restricted))",
     "flags": "i",
-    "weight": 0.75
+    "weight": 0.75,
+    "requiresCue": "(bedtime stor|recipe for|synthes|how to make|napalm|thermite|explosive|weapon|chemical|malware|restricted item|bomb|bypass|unrestricted|no (restrictions|limits)|roleplay|role ?play|act (as|like)|pretend|speak as|in character)"
   },
   {
     "id": "jb-048",
@@ -1442,5 +1446,165 @@
     "flags": "i",
     "weight": 0.55,
     "description": "Wave-4 phrase / destination pattern"
+  },
+  {
+    "id": "jb-ov-001",
+    "category": "system_prompt_extraction",
+    "pattern": "hidden (text|instructions?|prompt|rules?|message)\\s+(above|before|preceding|in (this|the) (message|context|document|conversation))",
+    "flags": "i",
+    "weight": 0.62,
+    "description": "Asks for hidden/system text placed above the user turn"
+  },
+  {
+    "id": "jb-ov-002",
+    "category": "system_prompt_extraction",
+    "pattern": "(text|instructions?|rules?|prompt|content)\\s+(above|preceding|before)\\s+(this|my)\\s+(message|turn|prompt|question)",
+    "flags": "i",
+    "weight": 0.58,
+    "description": "Refers to content above the user turn (system prompt probing)"
+  },
+  {
+    "id": "jb-ov-003",
+    "category": "system_prompt_extraction",
+    "pattern": "(tell|show|describe|list|explain) me (about )?(your|the) (rules?|guidelines?|instructions?|constraints?|directives?)\\s*(that|which)?\\s*(you (were|are) (given|told)|verbatim|exactly|word for word|above)",
+    "flags": "i",
+    "weight": 0.6,
+    "description": "Requests verbatim disclosure of governing instructions"
+  },
+  {
+    "id": "jb-ov-004",
+    "category": "roleplay_bypass",
+    "pattern": "(answer|respond|reply) as (two|both|multiple) (ai|ais|assistants?|models?|personas?|characters?)",
+    "flags": "i",
+    "weight": 0.62,
+    "description": "Dual-persona split where one persona is unfiltered"
+  },
+  {
+    "id": "jb-ov-005",
+    "category": "roleplay_bypass",
+    "pattern": "(one|second|other|another) (persona|character|ai|assistant|version)[^\\n]{0,60}\\b(no|without|zero) (filters?|restrictions?|limits?|guidelines?|rules?)",
+    "flags": "i",
+    "weight": 0.65,
+    "description": "Introduces a second persona defined as unrestricted"
+  },
+  {
+    "id": "jb-ov-006",
+    "category": "refusal_suppression",
+    "pattern": "\\b(points?|score|reward|credits?)\\b[^\\n]{0,70}\\b(without (a |any )?(warning|refusal|disclaimer|lecture)|(for|when) (not )?refus)",
+    "flags": "i",
+    "weight": 0.62,
+    "description": "Gamified reward for answering without refusing"
+  },
+  {
+    "id": "jb-ov-007",
+    "category": "refusal_suppression",
+    "pattern": "\\b(lose|deduct|subtract) (points?|score|credits?)\\b[^\\n]{0,50}\\b(refus|declin|warn)",
+    "flags": "i",
+    "weight": 0.6,
+    "description": "Penalty framing to suppress refusals"
+  },
+  {
+    "id": "jb-ov-008",
+    "category": "instruction_override",
+    "pattern": "(continue|complete|finish) (this|the) (text|sentence|paragraph|story|snippet)[^\\n]{0,60}(bypass|jailbreak|unfiltered|without (any )?(filter|restriction)|content filter)",
+    "flags": "i",
+    "weight": 0.66,
+    "description": "Prefill / continuation attack seeded with bypass language"
+  },
+  {
+    "id": "jb-ov-009",
+    "category": "instruction_override",
+    "pattern": "(begin|start) (your |the )?(reply|response|answer) with ['\"“]?(sure|certainly|absolutely|of course|i'm free|here (is|are))",
+    "flags": "i",
+    "weight": 0.6,
+    "description": "Forced affirmative prefix (compliance priming)"
+  },
+  {
+    "id": "jb-ov-010",
+    "category": "instruction_override",
+    "pattern": "(translate|summarize|rewrite|paraphrase)[^\\n]{0,80}(then|and) (follow|obey|execute|do) (it|them|the instructions?)",
+    "flags": "i",
+    "weight": 0.68,
+    "description": "Task-wrapper injection: transform then obey the payload"
+  },
+  {
+    "id": "jb-ov-011",
+    "category": "developer_mode",
+    "pattern": "(developer|admin|root|debug|maintenance|god) (override|code|token|key|passphrase)\\s*[:=]?\\s*[a-z0-9-]{2,}",
+    "flags": "i",
+    "weight": 0.66,
+    "description": "Fabricated privileged override credential"
+  },
+  {
+    "id": "jb-ov-012",
+    "category": "developer_mode",
+    "pattern": "(safety|guardrail|alignment|moderation|content) (layer|filter|system|check)s? (is |are |been )?(disabled|off|bypassed|turned off|deactivated|removed)",
+    "flags": "i",
+    "weight": 0.7,
+    "description": "Asserts the safety layer is already disabled"
+  },
+  {
+    "id": "jb-ov-013",
+    "category": "prompt_injection_marker",
+    "pattern": "\\b(note|attention|important|reminder|warning) (to|for) (the )?(ai|assistant|model|llm|agent|chatbot|system)\\b",
+    "flags": "i",
+    "weight": 0.68,
+    "description": "Text addressed to the model rather than the user (indirect injection)"
+  },
+  {
+    "id": "jb-ov-014",
+    "category": "prompt_injection_marker",
+    "pattern": "\\b(ai|assistant|model|agent|llm)\\b[^\\n]{0,30}\\bwhen you (read|see|process|parse) (this|it)\\b",
+    "flags": "i",
+    "weight": 0.72,
+    "description": "Conditional instruction aimed at the model reading the document"
+  },
+  {
+    "id": "jb-ov-015",
+    "category": "hypothetical_framing",
+    "pattern": "in a (world|universe|country|reality|timeline) (where|in which)[^\\n]{0,60}(no laws|legal|nothing is illegal|no rules|no restrictions|permitted|allowed)",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Consequence-free world framing"
+  },
+  {
+    "id": "jb-ov-016",
+    "category": "hypothetical_framing",
+    "pattern": "(actor|actress|character|novelist|screenwriter) (playing|portraying|writing)[^\\n]{0,60}(stay in character|give (me )?the real|actual (synthesis|recipe|method|steps))",
+    "flags": "i",
+    "weight": 0.68,
+    "description": "Fiction wrapper explicitly requesting real-world procedure"
+  },
+  {
+    "id": "jb-ov-017",
+    "category": "instruction_override",
+    "pattern": "(set aside|put aside|shelve|suspend|pause|drop|shed) (all |any |your |the )?(usual |normal |standard |default )?(rules?|guidelines?|policies|policy|restrictions?|guardrails?|instructions?|constraints?|filters?|alignment)",
+    "flags": "i",
+    "weight": 0.62,
+    "description": "Paraphrased instruction-override without the word \"ignore\""
+  },
+  {
+    "id": "jb-ov-018",
+    "category": "instruction_override",
+    "pattern": "(as (though|if)|as if) (your |the )?(safety|content|moderation)?\\s*(polic(y|ies)|rules?|guidelines?|filters?|restrictions?) (were|are|was) (optional|off|disabled|lifted|suspended|not (there|present|applicable))",
+    "flags": "i",
+    "weight": 0.66,
+    "description": "Counterfactual framing that policies do not apply"
+  },
+  {
+    "id": "jb-ov-019",
+    "category": "refusal_suppression",
+    "pattern": "(skip|omit|drop|leave out|no) (every |all |any )?(cautionary note|caveats?|warnings?|disclaimers?|safety (note|talk)|moral(izing)? (lecture|rant))",
+    "flags": "i",
+    "weight": 0.55,
+    "description": "Explicit suppression of warnings and caveats"
+  },
+  {
+    "id": "jb-ov-020",
+    "category": "encoding_trick_hint",
+    "pattern": "(so|so that|to avoid|to bypass|to evade)[^\\n]{0,40}(filters?|moderation|detection|guard)[^\\n]{0,20}(can(not|'t)? (read|see|catch|detect)|does ?n[o']t (trigger|catch|see))",
+    "flags": "i",
+    "weight": 0.7,
+    "description": "States the purpose of the encoding is filter evasion"
   }
 ]

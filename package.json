@@ -49,6 +49,8 @@
     "test:coverage": "vitest run --coverage",
     "headers": "node scripts/addLicenseHeaders.mjs",
     "fixtures:awesome-jailbreak": "node scripts/regenerateAwesomeJailbreakFixtures.mjs",
+    "train:intent-model": "node scripts/trainIntentModel.mjs",
+    "evaluate:guard": "npm run build && node scripts/evaluateGuard.mjs",
     "lint": "eslint \"src/**/*.{ts,tsx}\" \"test/**/*.ts\"",
     "typecheck": "tsc --noEmit",
     "ci": "npm run typecheck && npm run lint && npm test && npm run build"

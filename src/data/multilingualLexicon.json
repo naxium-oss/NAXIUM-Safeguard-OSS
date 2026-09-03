@@ -1,0 +1,38 @@
+{
+  "override": [
+    { "lang": "es", "pattern": "ignora (todas? las? )?(instrucciones|reglas) (anteriores|previas)", "weight": 0.65 },
+    { "lang": "es", "pattern": "olvida (tus |las )?(instrucciones|reglas)", "weight": 0.6 },
+    { "lang": "es", "pattern": "sin (restricciones|filtros|limites|límites)", "weight": 0.55 },
+    { "lang": "fr", "pattern": "ignore (toutes? les? )?(instructions|regles) (precedentes|anterieures)", "weight": 0.65 },
+    { "lang": "fr", "pattern": "sans (restrictions|filtres|limites)", "weight": 0.55 },
+    { "lang": "de", "pattern": "ignoriere (alle )?(vorherigen|fruheren) (anweisungen|regeln)", "weight": 0.65 },
+    { "lang": "de", "pattern": "ohne (einschrankungen|filter|beschrankungen)", "weight": 0.55 },
+    { "lang": "pt", "pattern": "ignore (todas? as? )?(instrucoes|regras) (anteriores|previas)", "weight": 0.65 },
+    { "lang": "it", "pattern": "ignora (tutte le )?(istruzioni|regole) (precedenti|anteriori)", "weight": 0.65 },
+    { "lang": "ru", "pattern": "игнорируй (все )?(предыдущие|прошлые) (инструкции|правила)", "weight": 0.65 },
+    { "lang": "zh", "pattern": "忽略(之前|先前|以上)(的)?(指令|规则|指示)", "weight": 0.65 },
+    { "lang": "ja", "pattern": "(以前|これまで)の(指示|ルール|命令)を(無視|無視して)", "weight": 0.65 },
+    { "lang": "ar", "pattern": "تجاهل (كل )?(التعليمات|القواعد) (السابقة|السابقة)", "weight": 0.6 }
+  ],
+  "persona": [
+    { "lang": "es", "pattern": "actua como (dan|un ai sin restricciones)", "weight": 0.68 },
+    { "lang": "es", "pattern": "eres ahora (dan|un modelo sin filtros)", "weight": 0.7 },
+    { "lang": "fr", "pattern": "tu es maintenant (dan|une ia sans restrictions)", "weight": 0.7 },
+    { "lang": "de", "pattern": "du bist jetzt (dan|eine ki ohne einschrankungen)", "weight": 0.7 },
+    { "lang": "pt", "pattern": "voce e agora (dan|uma ia sem restricoes)", "weight": 0.7 },
+    { "lang": "it", "pattern": "ora sei (dan|un'ia senza restrizioni)", "weight": 0.7 },
+    { "lang": "ru", "pattern": "ты теперь (дан|ии без ограничений)", "weight": 0.68 },
+    { "lang": "zh", "pattern": "你现在是(DAN|没有任何限制的AI)", "weight": 0.68 },
+    { "lang": "ja", "pattern": "あなたは今(DAN|制限のないAI)です", "weight": 0.68 }
+  ],
+  "harm": [
+    { "lang": "es", "pattern": "como (hackear|robar|fabricar una bomba)", "weight": 0.55 },
+    { "lang": "fr", "pattern": "comment (pirater|voler|fabriquer une bombe)", "weight": 0.55 },
+    { "lang": "de", "pattern": "wie (man hackt|man stiehlt|eine bombe baut)", "weight": 0.55 },
+    { "lang": "pt", "pattern": "como (hackear|roubar|fazer uma bomba)", "weight": 0.55 },
+    { "lang": "it", "pattern": "come (hackerare|rubare|costruire una bomba)", "weight": 0.55 },
+    { "lang": "ru", "pattern": "как (взломать|украсть|сделать бомбу)", "weight": 0.55 },
+    { "lang": "zh", "pattern": "如何(黑客|入侵|制造炸弹)", "weight": 0.55 },
+    { "lang": "ja", "pattern": "(ハッキング|侵入|爆弾を作る)方法", "weight": 0.55 }
+  ]
+}

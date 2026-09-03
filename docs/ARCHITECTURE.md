@@ -8,41 +8,47 @@ runs in-process; there is no required network call for scoring.
 │ Caller (app /  │ ────────────────────────────────────────────▶│  NaxiumSafeguard │
 │ CLI / HTTP)    │                                              └────────┬─────────┘
 └────────────────┘                                                       │
-                         normalize (unicode / size caps)                 │
+                    buildVariants() — canonical + evasive forms            │
                                          │                               │
          ┌───────────────────────────────┼───────────────────────────────┤
          ▼               ▼               ▼               ▼               ▼
     patterns        obfuscation      intent /        topics /        secrets /
-    + fuzzy         decode+recheck   disguise /      high-signal     PII / exfil
-    + n-gram                         authority /     tokens
-                                     slot-fill /
-                                     verb-chain /
-                                     code-smuggle /
-                                     url-threat /
-                                     repetition /
-                                     destructive shell
+    + fuzzy         variant rescan   disguise /      high-signal     PII / exfil
+    + n-gram        + payload      authority /     tokens
+    + multilingual    split          slot-fill /
+    + statistical                  verb-chain /
+    + config DSL                   code-smuggle /
+    + prompt markers               url-threat /
+                                   repetition /
+                                   destructive shell
+                                         │
+                    analyzeStance() — dampen dual-use evidence when benign
                                          │
                                          ▼
                                   riskEngine.assessRisk()
+                          primary vs corroborating · session carry-over
                                    allow | flag | block | lockout
                                          │
                                   sanitizer (wipe + alert)
                                          │
                                          ▼
-                                    GuardResult
+                              GuardResult (+ stance on input)
 ```
 
 ## Channels
 
 | Channel | Typical detectors |
 |---------|-------------------|
-| **input** | Full stack (jailbreak, topics, secrets, PII, destructive shell, heuristics, semantic TF-IDF, …) |
-| **output** | Secrets, credential dumps, exfil, PII, topics; limited jailbreak categories |
+| **input** | Full stack: variant pipeline, jailbreak heuristics, topics, secrets, PII, destructive shell, contrastive TF-IDF, statistical intent, multilingual cues, session tracking |
+| **output** | Secrets, credential dumps, exfil, PII, topics, output-compliance (prompt leaks / jailbreak agreement), limited jailbreak categories |
 | **tool** | SSRF blocklist / private IP checks, dangerous shell, SQLi / path traversal |
 
 ## Risk engine
 
-- Signals are scored with diminishing returns (dominant signal + corroboration).
+- Signals are grouped per detector+category; repeat hits from variant rescans do not stack naively.
+- **Primary** evidence can block; **corroborating** evidence (n-gram overlap, weak similarity) supports but cannot hard-block alone.
+- **Request stance** (operational vs defensive/informational/creative) discounts dual-use vocabulary when the ask is clearly protective or educational.
+- **Session risk** carries decaying escalation scores for multi-turn jailbreak pressure (crescendo attacks).
 - Security level (0–10) sets block/flag thresholds and which heavy detectors are enabled.
 - Category **`csam`** hard-blocks at every level (documented exception).
 
@@ -50,8 +56,10 @@ runs in-process; there is no required network call for scoring.
 
 Committed JSON under `src/data/` (copied to `dist/data` on build):
 
-- `jailbreakPatterns.json`, `topicLexicons.json`, `knownAttackCorpus.json`
+- `jailbreakPatterns.json`, `topicLexicons.json`, `knownAttackCorpus.json`, `benignCorpus.json`
 - `disguisePhrases.json`, `highSignalTokens.json`, `ngramRiskBank.json`
+- `lexicalBaseline.json`, `stanceCues.json`, `multilingualLexicon.json`
+- `intentModel.json` (logistic weights — retrain with `npm run train:intent-model`)
 - `secretsPatterns.json`, `ssrfBlocklist.json`
 
 ## Surfaces

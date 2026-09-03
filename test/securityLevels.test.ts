@@ -35,8 +35,11 @@ describe('buildLevelConfig', () => {
     expect(buildLevelConfig(4).enableSemanticSimilarity).toBe(true);
     expect(buildLevelConfig(4).enableStrictPII).toBe(false);
     expect(buildLevelConfig(5).enableStrictPII).toBe(true);
-    expect(buildLevelConfig(2).enableToolStrictMode).toBe(false);
     expect(buildLevelConfig(3).enableToolStrictMode).toBe(true);
+    expect(buildLevelConfig(2).enableMultilingualIntent).toBe(true);
+    expect(buildLevelConfig(1).enableMultilingualIntent).toBe(false);
+    expect(buildLevelConfig(3).enableStatisticalIntent).toBe(true);
+    expect(buildLevelConfig(4).enableSessionTracking).toBe(true);
   });
 
   it('disables lockout duration at level 0', () => {

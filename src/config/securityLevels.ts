@@ -24,6 +24,19 @@ export interface LevelConfig {
   enableSemanticSimilarity: boolean;
   enableStrictPII: boolean;
   enableToolStrictMode: boolean;
+  /** Locally trained logistic intent model. */
+  enableStatisticalIntent: boolean;
+  /** Non-English override / persona / harm lexicons. */
+  enableMultilingualIntent: boolean;
+  /** Carry decaying risk across turns of one session (crescendo attacks). */
+  enableSessionTracking: boolean;
+  /**
+   * How much benign framing (defensive / educational / fictional stance) is
+   * allowed to discount dual-use evidence. 1 = full trust, 0 = ignore framing.
+   */
+  stanceDampening: number;
+  /** Multiplier applied to carried-over session risk. */
+  sessionRiskWeight: number;
   maxViolationsBeforeLockout: number;
   lockoutDurationMs: number;
   rateLimitPerMinute: number;
@@ -55,6 +68,12 @@ export function buildLevelConfig(level: SecurityLevel): LevelConfig {
     enableSemanticSimilarity: level >= 4,
     enableStrictPII: level >= 5,
     enableToolStrictMode: level >= 3,
+    enableStatisticalIntent: level >= 3,
+    enableMultilingualIntent: level >= 2,
+    enableSessionTracking: level >= 4,
+    // Full trust in benign framing up to level 6, then progressively less.
+    stanceDampening: clamp01(1 - Math.max(0, t - 0.6) * 1.2), // 1.00 -> 0.52
+    sessionRiskWeight: level === 0 ? 0 : 0.1 + t * 0.2, // 0.10 -> 0.30
     maxViolationsBeforeLockout: Math.max(1, Math.round(10 - t * 8)), // 10 -> 2
     lockoutDurationMs: level === 0 ? 0 : Math.round(60_000 + t * 14 * 60_000), // up to 15min
     rateLimitPerMinute: Math.max(5, Math.round(300 - t * 290)), // 300/min -> 10/min
