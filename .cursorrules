@@ -17,10 +17,10 @@
 # Scratchpad
 
 ## Current task
-Continue /goal: audit remaining overhaul requirements vs tree — IN PROGRESS
+Continue /goal: audit remaining overhaul requirements vs tree — COMPLETE (pending PR push)
 
 ## Audit gaps being closed
-[ ] Unit tests: promptMarker, outputCompliance, SessionRiskTracker, deleet 2→to
-[ ] SECURITY_LEVELS multilingual column; README trainer/eval scripts
-[ ] CI + evaluate:guard + coverage
+[X] Unit tests: promptMarker, outputCompliance, SessionRiskTracker, deleet 2→to
+[X] SECURITY_LEVELS multilingual column; README trainer/eval scripts
+[X] CI + evaluate:guard + coverage (476 tests; 0 FP / 100% catch)
 [ ] Commit, push, update PR
