@@ -92,6 +92,8 @@ Levels **0–10** tune thresholds, detector enablement, and rate/lockout aggress
 npm install --legacy-peer-deps
 npm run ci          # typecheck + lint + test + build
 npm run build
+npm run train:intent-model   # after editing attack/benign corpora
+npm run evaluate:guard       # confusion stats on committed fixtures
 ```
 
 Contributor and agent guides:
