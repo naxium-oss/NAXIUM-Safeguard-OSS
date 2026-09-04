@@ -16,8 +16,8 @@ Defense in depth — not a silver bullet. Read [`docs/LIMITATIONS.md`](./docs/LI
 
 ## Capabilities
 
-- **Jailbreak / injection** — regex patterns, intent heuristics, disguise framing, authority laundering, fuzzy tokens, many-shot repetition, code/markup smuggling
-- **Obfuscation** — Unicode/homoglyph/zero-width, leetspeak, base64/hex/rot13 decode-and-recheck
+- **Jailbreak / injection** — regex patterns (cue-gated), intent heuristics, statistical logistic model, multilingual cues, disguise framing, authority laundering, config/DSL injection, prompt markers, payload-split reconstruction, fuzzy tokens, contrastive TF-IDF, session crescendo tracking
+- **Obfuscation** — Unicode/homoglyph/tag chars, diacritics, spacing/punctuation splits, leetspeak, URL/HTML entities, markdown emphasis, base64/hex/rot13/reversed-text variant rescans
 - **Topics** — large lexicon banks (cyber, fraud, privacy, social engineering, weapons, bio/chem, self-harm, extremism) + CSAM hard-block
 - **Destructive ops** — `rm -rf`, fork bombs, disk wipe, curl\|sh, and related shell patterns in free text
 - **Secrets & PII** — API keys, credential dumps, exfiltration cues, email/SSN/card/phone
@@ -92,6 +92,8 @@ Levels **0–10** tune thresholds, detector enablement, and rate/lockout aggress
 npm install --legacy-peer-deps
 npm run ci          # typecheck + lint + test + build
 npm run build
+npm run train:intent-model   # after editing attack/benign corpora
+npm run evaluate:guard       # confusion stats on committed fixtures
 ```
 
 Contributor and agent guides:

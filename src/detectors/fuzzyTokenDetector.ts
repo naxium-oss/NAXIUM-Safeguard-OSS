@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 import { loadDataFile } from '../utils/loadJson.js';
+import { isCommonWord } from '../utils/lexicon.js';
 import type { DetectionSignal } from '../types.js';
 
 interface TokenEntry {
@@ -25,6 +26,23 @@ interface TokenEntry {
 const TOKENS = loadDataFile<TokenEntry[]>('highSignalTokens.json').filter(
   (t) => t.token.length >= 4 && t.weight >= 0.28,
 );
+
+/** Tokens bucketed by length so only plausible edit-distance candidates are compared. */
+const BY_LENGTH = new Map<number, TokenEntry[]>();
+for (const entry of TOKENS) {
+  const bucket = BY_LENGTH.get(entry.token.length);
+  if (bucket) bucket.push(entry);
+  else BY_LENGTH.set(entry.token.length, [entry]);
+}
+
+function candidatesFor(length: number): TokenEntry[] {
+  const out: TokenEntry[] = [];
+  for (let l = length - 2; l <= length + 2; l++) {
+    const bucket = BY_LENGTH.get(l);
+    if (bucket) out.push(...bucket);
+  }
+  return out;
+}
 
 function levenshtein(a: string, b: string): number {
   if (a === b) return 0;
@@ -48,21 +66,25 @@ function levenshtein(a: string, b: string): number {
 /**
  * Fuzzy token layer — catches typos / light mutations of high-signal words
  * (e.g. "hackingg", "ransomwar", "phising") via bounded Levenshtein distance.
- * Exact matches are left to highSignalTokenDetector.
+ *
+ * Exact matches are left to highSignalTokenDetector, and ordinary English
+ * words are skipped: "features" is one edit from a bank token but is not a
+ * mutated attack term. Fuzzy evidence is corroborating by design — a near-miss
+ * spelling is a hint, not a request.
  */
 export function detectFuzzyTokens(rawText: string): DetectionSignal[] {
   if (!rawText || rawText.length < 4 || rawText.length > 8_192) return [];
 
-  const words = rawText.toLowerCase().match(/[a-z0-9][a-z0-9_-]{3,24}/g) ?? [];
-  if (words.length === 0) return [];
+  const words = new Set(rawText.toLowerCase().match(/[a-z0-9][a-z0-9_-]{3,24}/g) ?? []);
+  if (words.size === 0) return [];
 
   const matched: string[] = [];
   let score = 0;
 
   for (const w of words) {
-    for (const t of TOKENS) {
+    if (isCommonWord(w)) continue;
+    for (const t of candidatesFor(w.length)) {
       if (w === t.token) continue; // exact handled elsewhere
-      if (Math.abs(w.length - t.token.length) > 2) continue;
       const dist = levenshtein(w, t.token);
       const maxDist = t.token.length >= 8 ? 2 : 1;
       if (dist > 0 && dist <= maxDist) {
@@ -76,12 +98,16 @@ export function detectFuzzyTokens(rawText: string): DetectionSignal[] {
 
   if (matched.length === 0) return [];
 
+  const tier = score >= 0.45 || matched.length >= 2 ? 'primary' : 'corroborating';
+
   return [
     {
       detector: 'fuzzyToken',
       category: 'fuzzy_attack_vocab',
       score: Math.min(1, score),
       weight: 1,
+      tier,
+      reliability: 0.8,
       matched: matched.slice(0, 8),
       details: 'Fuzzy match to high-signal attack vocabulary',
     },

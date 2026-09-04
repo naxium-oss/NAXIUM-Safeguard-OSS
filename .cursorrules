@@ -7,6 +7,9 @@
 - Don't leave one-off generate/add scripts as permanent surface unless documented as maintainers tools
 - User wants professional/honest naming — avoid "insane" in public docs/CI/script names
 - Short TF-IDF/n-gram FP fixes; TUI no trim-on-keystroke
+- ESLint `no-misleading-character-class` disable must sit on the regex line, not the const line
+- Topic comboBoosters must fire without a prior term match; mask benign compounds (bath bomb) before weapons matching
+- SECURITY_LEVELS.md even-level table must still document flags that turn on at odd levels (statistical intent @ 3)
 
 ### User Specified Lessons
 - venv; multiline git via file + `[Cursor] `
@@ -14,13 +17,10 @@
 # Scratchpad
 
 ## Current task
-100% overhaul CI/docs/tests/AGENTS/CONTRIBUTING + cleanup — COMPLETE
+Continue /goal: audit remaining overhaul requirements vs tree — COMPLETE (pending PR push)
 
-## Progress
-[X] Removed generateInsane* / generateExpandedPhrases; kept copy-assets, headers, awesome fixture regen
-[X] Moved bib titles to test/fixtures; renamed regenerateAwesomeJailbreakFixtures
-[X] CI: quality → matrix test → coverage artifact; concurrency + permissions
-[X] AGENTS.md, CONTRIBUTING.md, docs/TESTING.md; ARCHITECTURE/LIMITATIONS/SECURITY refreshed
-[X] Tests renamed/consolidated (detectorLayers, packaging); lint fixed
-[X] npm run ci + coverage green (456 tests)
-[ ] Commit — waiting for user request
+## Audit gaps being closed
+[X] Unit tests: promptMarker, outputCompliance, SessionRiskTracker, deleet 2→to
+[X] SECURITY_LEVELS multilingual column; README trainer/eval scripts
+[X] CI + evaluate:guard + coverage (476 tests; 0 FP / 100% catch)
+[ ] Commit, push, update PR

@@ -156,6 +156,26 @@
     "category": "weapons",
     "terms": [
       {
+        "term": "how to make a bomb",
+        "weight": 0.95
+      },
+      {
+        "term": "make a bomb",
+        "weight": 0.9
+      },
+      {
+        "term": "build a bomb",
+        "weight": 0.9
+      },
+      {
+        "term": "homemade bomb",
+        "weight": 0.85
+      },
+      {
+        "term": "pipe bomb",
+        "weight": 0.85
+      },
+      {
         "term": "build a pipe bomb",
         "weight": 0.85
       },
@@ -294,14 +314,49 @@
           "build",
           "explosive"
         ],
-        "bonus": 0.3
+        "bonus": 0.35
+      },
+      {
+        "terms": [
+          "make",
+          "bomb"
+        ],
+        "bonus": 0.45
+      },
+      {
+        "terms": [
+          "build",
+          "bomb"
+        ],
+        "bonus": 0.45
+      },
+      {
+        "terms": [
+          "craft",
+          "bomb"
+        ],
+        "bonus": 0.4
       },
       {
         "terms": [
           "assemble",
           "bomb"
         ],
-        "bonus": 0.35
+        "bonus": 0.4
+      },
+      {
+        "terms": [
+          "how to",
+          "bomb"
+        ],
+        "bonus": 0.45
+      },
+      {
+        "terms": [
+          "make",
+          "explosive"
+        ],
+        "bonus": 0.4
       },
       {
         "terms": [
@@ -29344,6 +29399,198 @@
       {
         "term": "bcdedit delete",
         "weight": 0.9
+      }
+    ]
+  },
+  {
+    "category": "hate_harassment",
+    "terms": [
+      {
+        "term": "racist joke",
+        "weight": 0.85
+      },
+      {
+        "term": "racist jokes",
+        "weight": 0.85
+      },
+      {
+        "term": "slur against",
+        "weight": 0.8
+      },
+      {
+        "term": "hate speech against",
+        "weight": 0.8
+      },
+      {
+        "term": "dehumanize",
+        "weight": 0.7
+      },
+      {
+        "term": "genocide was justified",
+        "weight": 0.9
+      },
+      {
+        "term": "ethnic cleansing",
+        "weight": 0.85
+      },
+      {
+        "term": "kill all",
+        "weight": 0.75
+      },
+      {
+        "term": "death to all",
+        "weight": 0.85
+      }
+    ],
+    "comboBoosters": [
+      {
+        "terms": [
+          "racist",
+          "joke"
+        ],
+        "bonus": 0.35
+      }
+    ]
+  },
+  {
+    "category": "disinformation",
+    "terms": [
+      {
+        "term": "fake news article",
+        "weight": 0.7
+      },
+      {
+        "term": "convincing fake news",
+        "weight": 0.75
+      },
+      {
+        "term": "fabricated study",
+        "weight": 0.7
+      },
+      {
+        "term": "fake studies cited",
+        "weight": 0.75
+      },
+      {
+        "term": "vaccine causes autism",
+        "weight": 0.85
+      },
+      {
+        "term": "election was stolen proof",
+        "weight": 0.7
+      },
+      {
+        "term": "deepfake propaganda",
+        "weight": 0.7
+      },
+      {
+        "term": "misinformation campaign",
+        "weight": 0.65
+      }
+    ],
+    "comboBoosters": [
+      {
+        "terms": [
+          "fake",
+          "study"
+        ],
+        "bonus": 0.3
+      }
+    ]
+  },
+  {
+    "category": "drug_synthesis",
+    "terms": [
+      {
+        "term": "synthesize methamphetamine",
+        "weight": 0.9
+      },
+      {
+        "term": "meth synthesis",
+        "weight": 0.9
+      },
+      {
+        "term": "cook meth",
+        "weight": 0.9
+      },
+      {
+        "term": "mdma synthesis",
+        "weight": 0.88
+      },
+      {
+        "term": "make fentanyl",
+        "weight": 0.92
+      },
+      {
+        "term": "heroin production",
+        "weight": 0.9
+      },
+      {
+        "term": "extract dmt",
+        "weight": 0.85
+      },
+      {
+        "term": "psilocybin extraction",
+        "weight": 0.8
+      },
+      {
+        "term": "home drug lab",
+        "weight": 0.85
+      }
+    ],
+    "comboBoosters": [
+      {
+        "terms": [
+          "synthesize",
+          "home"
+        ],
+        "bonus": 0.25
+      }
+    ]
+  },
+  {
+    "category": "violence",
+    "terms": [
+      {
+        "term": "how to stalk",
+        "weight": 0.8
+      },
+      {
+        "term": "stalk my ex",
+        "weight": 0.85
+      },
+      {
+        "term": "track someone without them knowing",
+        "weight": 0.8
+      },
+      {
+        "term": "hotwire a car",
+        "weight": 0.75
+      },
+      {
+        "term": "pick a lock without",
+        "weight": 0.7
+      },
+      {
+        "term": "lethal dose of insulin",
+        "weight": 0.85
+      },
+      {
+        "term": "poison someone",
+        "weight": 0.9
+      },
+      {
+        "term": "make someone disappear",
+        "weight": 0.8
+      }
+    ],
+    "comboBoosters": [
+      {
+        "terms": [
+          "stalk",
+          "without"
+        ],
+        "bonus": 0.3
       }
     ]
   }

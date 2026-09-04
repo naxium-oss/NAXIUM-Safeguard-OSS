@@ -32,6 +32,15 @@ export interface GuardContext {
 
 export type GuardAction = 'allow' | 'flag' | 'block' | 'lockout';
 
+/**
+ * How much a signal is trusted on its own.
+ *
+ * `primary` signals describe an intent or artifact that is risky by itself.
+ * `corroborating` signals (vocabulary overlap, fuzzy spelling, similarity)
+ * are only ever supporting evidence and can never reach a block alone.
+ */
+export type SignalTier = 'primary' | 'corroborating';
+
 export interface DetectionSignal {
   detector: string;
   category: string;
@@ -39,6 +48,24 @@ export interface DetectionSignal {
   weight: number; // multiplier, usually 1
   matched: string[];
   details?: string;
+  /** Defaults to `primary` when omitted. */
+  tier?: SignalTier;
+  /** Detector precision multiplier (0-1). Defaults to 1. */
+  reliability?: number;
+  /** Label of the text variant that produced the hit (e.g. `base64`). */
+  variant?: string;
+}
+
+/**
+ * What the request is *trying to do* with risky vocabulary, which decides
+ * whether topic/vocabulary evidence should be discounted.
+ */
+export type RequestStance = 'operational' | 'defensive' | 'informational' | 'creative' | 'unknown';
+
+export interface StanceAssessment {
+  stance: RequestStance;
+  confidence: number;
+  cues: string[];
 }
 
 export interface GuardResult {
@@ -51,6 +78,8 @@ export interface GuardResult {
   alertMessage?: string;
   blockedCategories: string[];
   latencyMs: number;
+  /** Request stance used to weight dual-use evidence (input channel only). */
+  stance?: StanceAssessment;
 }
 
 export interface ToolCallGuardInput {

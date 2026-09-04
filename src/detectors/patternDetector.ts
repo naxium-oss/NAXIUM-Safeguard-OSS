@@ -15,8 +15,16 @@
  * limitations under the License.
  */
 import { loadDataFile } from '../utils/loadJson.js';
-import type { DetectionSignal } from '../types.js';
+import type { DetectionSignal, SignalTier } from '../types.js';
 
+/**
+ * Documented-template layer.
+ *
+ * Two data-driven refinements keep this from being a bag of trigger-happy
+ * regexes: `requiresCue` lets an FP-prone template demand a second cue in the
+ * same text (so "my late grandmother" alone is not a jailbreak), and `tier`
+ * marks templates that are merely suggestive as corroborating evidence.
+ */
 interface RawPattern {
   id: string;
   category: string;
@@ -24,25 +32,37 @@ interface RawPattern {
   flags: string;
   weight: number;
   description?: string;
+  /** Additional regex that must also match for this pattern to count. */
+  requiresCue?: string;
+  /** Defaults to `primary`. */
+  tier?: SignalTier;
+  /** Detector precision multiplier, defaults to 1. */
+  reliability?: number;
 }
 
 const raw = loadDataFile<RawPattern[]>('jailbreakPatterns.json');
-const compiled = raw.map((p) => ({ ...p, regex: new RegExp(p.pattern, p.flags) }));
+const compiled = raw.map((p) => ({
+  ...p,
+  regex: new RegExp(p.pattern, p.flags),
+  cue: p.requiresCue ? new RegExp(p.requiresCue, 'i') : undefined,
+}));
 
 export function detectPatterns(text: string): DetectionSignal[] {
   const signals: DetectionSignal[] = [];
   for (const p of compiled) {
     const match = text.match(p.regex);
-    if (match) {
-      signals.push({
-        detector: 'patternDetector',
-        category: p.category,
-        score: p.weight,
-        weight: 1,
-        matched: [match[0]],
-        details: p.description ?? p.id,
-      });
-    }
+    if (!match) continue;
+    if (p.cue && !p.cue.test(text)) continue;
+    signals.push({
+      detector: 'patternDetector',
+      category: p.category,
+      score: p.weight,
+      weight: 1,
+      tier: p.tier ?? 'primary',
+      reliability: p.reliability ?? 1,
+      matched: [match[0]],
+      details: p.description ?? p.id,
+    });
   }
   return signals;
 }

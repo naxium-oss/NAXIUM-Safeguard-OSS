@@ -44,6 +44,8 @@ Useful scripts:
 | `npm run build` | Compile + copy `src/data` → `dist/data` |
 | `npm run headers` | Ensure Apache-2.0 file headers |
 | `npm run fixtures:awesome-jailbreak` | Regenerate Awesome-Jailbreak test fixtures |
+| `npm run train:intent-model` | Retrain logistic intent model → `src/data/intentModel.json` |
+| `npm run evaluate:guard` | Print benign/evasion confusion stats (requires build) |
 
 ## What to work on
 

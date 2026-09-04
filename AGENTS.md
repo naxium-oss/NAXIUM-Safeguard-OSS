@@ -20,6 +20,7 @@ Guidance for coding agents and automated contributors working in this repository
 7. **Prefer fixing detectors generally** when a family of attacks slips through — not one-off strings for a single demo prompt.
 8. **TUI input:** never `.trim()` on every keystroke (breaks spaces). Trim on submit only.
 9. **License headers:** source under `src/`, `test/`, and `scripts/` should carry SPDX `Apache-2.0` and copyright `enderchefcoder`. Run `npm run headers` after adding files.
+10. **Intent model:** after editing `benignCorpus.json` or `knownAttackCorpus.json`, run `npm run train:intent-model` and commit the updated `src/data/intentModel.json`.
 
 ## Layout
 
@@ -34,7 +35,7 @@ Guidance for coding agents and automated contributors working in this repository
 | `test/` | Vitest suite |
 | `test/fixtures/` | Committed fixtures (e.g. Awesome-Jailbreak) |
 | `docs/` | Architecture, security, limitations, levels |
-| `scripts/` | Maintainer utilities only (`copy-assets`, `headers`, fixture regen) |
+| `scripts/` | Maintainer utilities (`copy-assets`, `headers`, fixture regen, intent trainer) |
 
 ## Commands
 
@@ -47,6 +48,8 @@ npm run test:coverage
 npm run build
 npm run headers
 npm run fixtures:awesome-jailbreak   # regenerate bibliography fixtures only
+npm run train:intent-model           # retrain logistic intent weights after corpus edits
+npm run evaluate:guard               # benign/evasion confusion stats (requires build)
 ```
 
 ## Changing detection data

@@ -116,11 +116,13 @@ export function detectInnocentDisguise(rawText: string): DetectionSignal[] {
 
   // Soft dual-use recon alone — typically FLAG at high levels, not always BLOCK
   if (recon.length > 0 && payloads.length === 0 && modifiers.length === 0 && !exploitCue) {
+    const score = Math.min(0.48, 0.36 + recon.length * 0.06);
     signals.push({
       detector: 'disguiseDetector',
       category: 'dual_use_recon',
-      score: Math.min(0.32, 0.24 + recon.length * 0.04),
+      score,
       weight: 1,
+      tier: score >= 0.38 ? 'primary' : 'corroborating',
       matched: recon.slice(0, 3).map((p) => p.phrase),
       details: 'Dual-use vulnerability/recon phrasing',
     });

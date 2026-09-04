@@ -14,8 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { buildTfidfModel, vectorizeQuery, bestMatch, sharedFeatureCount } from '../utils/tfidf.js';
+import { BENIGN_EXAMPLES } from '../utils/lexicon.js';
 import { loadDataFile } from '../utils/loadJson.js';
-import { buildTfidfModel, vectorizeQuery, cosineSim } from '../utils/tfidf.js';
 import type { DetectionSignal } from '../types.js';
 
 interface AttackExample {
@@ -25,41 +26,71 @@ interface AttackExample {
 }
 
 const corpus = loadDataFile<AttackExample[]>('knownAttackCorpus.json');
-const model = buildTfidfModel(corpus.map((c) => c.text));
 
 /**
- * Catches paraphrases of known attack templates that exact-match regex
- * patterns would miss. Purely local TF-IDF cosine similarity — no network
- * calls, no external models.
+ * One index over both corpora so attack and benign similarities share an IDF
+ * space and can be compared directly.
+ */
+const model = buildTfidfModel([
+  ...corpus.map((c) => c.text),
+  ...BENIGN_EXAMPLES.map((b) => b.text),
+]);
+const ATTACK_INDICES = corpus.map((_, i) => i);
+const BENIGN_INDICES = BENIGN_EXAMPLES.map((_, i) => corpus.length + i);
+
+const MAX_TEXT_CHARS = 16_384;
+/** Below this, a match is noise no matter how the benign side scores. */
+const ABSOLUTE_FLOOR = 0.3;
+/** Attack similarity must beat the nearest benign example by this much. */
+const MARGIN_FLOOR = 0.12;
+/** Short inputs share too little signal to trust a nearest-neighbour verdict. */
+const SHORT_INPUT_TOKENS = 6;
+const SHORT_INPUT_FLOOR = 0.55;
+/** A single overlapping feature is a coincidence, not a paraphrase. */
+const MIN_SHARED_FEATURES = 3;
+
+/**
+ * Contrastive nearest-neighbour check against the local corpora.
+ *
+ * Similarity to an attack template only counts when the text is *more* like
+ * that attack than like anything in the benign corpus. This is what stops
+ * ordinary requests that happen to share filler phrasing with an attack
+ * template ("give me a recipe for…") from scoring as paraphrased jailbreaks.
  */
 export function semanticSimilarityCheck(text: string, threshold = 0.42): DetectionSignal[] {
   // Skip pathological inputs — TF-IDF over megabyte strings is a CPU DoS vector
-  if (!text || text.length > 16_384) return [];
+  if (!text || text.length > MAX_TEXT_CHARS) return [];
 
-  // Short benign prompts ("secure my site") false-positive easily against a
-  // large attack corpus — require a stricter match for brief inputs.
   const tokenCount = text.trim().split(/\s+/).filter(Boolean).length;
-  const effectiveThreshold = tokenCount <= 5 ? Math.max(threshold, 0.55) : threshold;
+  const effectiveThreshold = Math.max(
+    ABSOLUTE_FLOOR,
+    tokenCount <= SHORT_INPUT_TOKENS ? Math.max(threshold, SHORT_INPUT_FLOOR) : threshold,
+  );
 
-  const qVec = vectorizeQuery(text, model);
-  let best = { sim: 0, idx: -1 };
+  const query = vectorizeQuery(text, model);
+  const attack = bestMatch(query, model, ATTACK_INDICES);
+  if (attack.index === -1 || attack.sim < effectiveThreshold) return [];
+  if (sharedFeatureCount(query, model, attack.index) < MIN_SHARED_FEATURES) return [];
 
-  model.docVectors.forEach((vec, idx) => {
-    const sim = cosineSim(qVec, vec);
-    if (sim > best.sim) best = { sim, idx };
-  });
+  const benign = bestMatch(query, model, BENIGN_INDICES);
+  const margin = attack.sim - benign.sim;
+  if (margin < MARGIN_FLOOR) return [];
 
-  if (best.idx === -1 || best.sim < effectiveThreshold) return [];
+  const example = corpus[attack.index];
+  // Confidence follows the margin, not the raw similarity: a text that looks
+  // equally like both corpora is not evidence of anything.
+  const score = Math.min(1, attack.sim * (0.55 + Math.min(0.45, margin)));
 
-  const example = corpus[best.idx];
   return [
     {
       detector: 'semanticSimilarity',
       category: example.category,
-      score: Math.min(1, best.sim),
+      score,
       weight: 1,
+      tier: score >= 0.55 ? 'primary' : 'corroborating',
+      reliability: 0.9,
       matched: [example.id],
-      details: `Similar to known attack pattern (cosine=${best.sim.toFixed(2)})`,
+      details: `Similar to known attack pattern (cosine=${attack.sim.toFixed(2)}, margin=${margin.toFixed(2)})`,
     },
   ];
 }
